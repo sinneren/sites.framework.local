@@ -1,0 +1,24 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+$phoneFZ: 30px;
+$phoneCodeFZ: 20px;
+
+.phone {
+  display: inline-block;
+  color: $color_ext1;
+  font: {
+    size: $phoneFZ;
+    weight: 300;
+  }
+  text-decoration: none;
+  &__code {
+    margin: {
+      right: 5px;
+    }
+    font: {
+      size: $phoneCodeFZ;
+    }
+    line-height: 2;
+  }
+}

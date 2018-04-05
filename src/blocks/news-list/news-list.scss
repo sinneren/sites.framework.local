@@ -1,0 +1,57 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+$firstItemPicWidth: 300px;
+.news-list {
+  @include cfx();
+  margin-top: $vr * 6;
+  &.first-detail {
+      .news-list__item {
+          &:first-child {
+            @include span(9);
+            margin: {
+              bottom: $vr * 6;
+            }
+            clear: both;
+            .news-list__pic {
+              width: 300px;
+              height: $vr * 30;
+            }
+            .news-list__content {
+              max-width: initial;
+              font: {
+                family: $ff;
+                size: 15px;
+                weight: bold;
+                line-height: 1.6;
+              }
+              clear: initial;
+            }
+            .news-list__date {
+              position: absolute;
+              bottom: $vr * 2;
+              left: $firstItemPicWidth + $vr * 2;
+            }
+          }
+      }
+  }
+  .agents {
+      .news-list__pic {
+          width: 128px;
+          height: 128px;
+          clear: both;
+      }
+      .news-list__title {
+          font-size: 30px;
+          line-height: 32px;
+          color: $color_ext1;
+          clear: both;
+      }
+      .news-list__subtitle {
+          font-size: 18px;
+          line-height: 1.78;
+          color: $color_ext1;
+          clear: both;
+      }
+  }
+}

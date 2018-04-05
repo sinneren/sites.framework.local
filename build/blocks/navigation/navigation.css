@@ -1,0 +1,145 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 10, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+.navigation {
+  background-color: #4990E2;
+  color: #FFFFFF; }
+  /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .navigation:after, .navigation:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 22, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__logo {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    float: left; }
+  /* line 31, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__title {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    float: left;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  /* line 44, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation-row {
+    margin-left: -16px;
+    margin-right: -16px; }
+  /* line 52, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__nav {
+    float: left; }
+    /* line 54, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__nav--right {
+      float: right; }
+  /* line 61, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    vertical-align: middle; }
+    /* line 69, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__menu-item {
+      display: block;
+      float: left; }
+      /* line 72, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+      .navigation__menu-item.is-active, .navigation__menu-item:hover {
+        background-color: #000000;
+        background-color: rgba(0, 0, 0, .07); }
+    /* line 82, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__menu-link {
+      display: block;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 2;
+      color: #FFFFFF; }
+      /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+      .navigation__menu-link:after, .navigation__menu-link:after {
+        content: '';
+        display: table;
+        clear: both; }
+    /* line 102, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__menu-icon {
+      display: block;
+      float: left; }
+    /* line 111, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__menu-text {
+      float: left; }
+  /* line 118, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__control {
+    float: right;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    padding-right: 16px; }
+    /* line 128, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__control input[type='checkbox'] {
+      display: none; }
+      /* line 130, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+      .navigation__control input[type='checkbox']:checked + .navigation__control-view {
+        background-color: #7ED321; }
+        /* line 132, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+        .navigation__control input[type='checkbox']:checked + .navigation__control-view:before {
+          left: auto;
+          right: -2px; }
+    /* line 138, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+    .navigation__control-view {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 20px;
+      -webkit-border-radius: 20px;
+              border-radius: 20px;
+      background-color: #D8D8D8;
+      -webkit-transition: all 150ms ease-out;
+      transition: all 150ms ease-out; }
+      /* line 146, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+      .navigation__control-view:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -1px;
+        left: -1px;
+        right: auto;
+        width: 22px;
+        height: 22px;
+        -webkit-border-radius: 20px;
+                border-radius: 20px;
+        background-color: #FFFFFF;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+        cursor: pointer; }
+      @media (min-width: 0) and (max-width: 1024px) {/* line 10, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation {
+    padding-left: 10px;
+    padding-right: 10px; }/* line 44, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation-row {
+    margin-left: 0;
+    margin-right: 0; }/* line 52, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__nav {
+    width: 100%; }/* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .navigation__menu:after, .navigation__menu:after {
+    content: '';
+    display: table;
+    clear: both; }/* line 69, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__menu-item {
+    width: 33%; }/* line 82, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__menu-link {
+    text-align: center;
+    line-height: 1.13; }/* line 102, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__menu-icon {
+    float: none;
+    margin-left: auto;
+    margin-right: auto; }/* line 111, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__menu-text {
+    width: 100%; }/* line 118, C:/work/assembly/sites.framework.local/src/blocks/navigation/navigation.scss */
+  .navigation__control {
+    display: none; } }

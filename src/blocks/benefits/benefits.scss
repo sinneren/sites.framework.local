@@ -1,0 +1,81 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$sectiobBg: #ECF3FC;
+
+.benefits {
+  padding: {
+    top: 48px;
+    bottom: 24px;
+  }
+  background: {
+    color: $sectiobBg;
+  }
+  @include susy-breakpoint(0 $tabletBP) {
+      padding: {
+          top: $vr * 2;
+          bottom: $vr * 2;
+          left: 20px;
+          right: 20px;
+      }
+  }
+  &__item {
+    @include span(6);
+    margin: {
+      top: 32px;
+      bottom: 24px;
+    }
+    &:nth-child(odd) {
+      @include last;
+    }
+    @include susy-breakpoint(0 $tabletBP) {
+        @include span(12);
+        margin: {
+          top: $vr;
+          bottom: $vr;
+        }
+    }
+    &-title {
+      margin: {
+        top: 50px;
+      }
+      font: {
+        size: 30px;
+      }
+      font-size: 30px;
+      line-height: 2.13;
+      text-align: left;
+      color: $color_ext1;
+      @include susy-breakpoint(0 $tabletBP) {
+          margin-top: $vr;
+          font-size: 24px;
+          line-height: 1.33;
+      }
+    }
+  }
+  &__pic {
+    float: left;
+    margin: {
+      right: 16px;
+      bottom: 16px;
+    }
+    @include susy-breakpoint(0 $tabletBP) {
+        float: none;
+        clear: both;
+    }
+  }
+  &__title {
+    margin: 0;
+    font: {
+      weight: normal;
+    }
+    @include susy-breakpoint(0 $tabletBP) {
+        font-size: 24px;
+        line-height: 1.33;
+    }
+  }
+  &__text {
+    clear: both;
+  }
+}

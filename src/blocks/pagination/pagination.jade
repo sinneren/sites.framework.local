@@ -1,0 +1,20 @@
+include ../../system/_mixins
+include ../../system/_vars
+- var jColorIcons = '4990e2'
+
+.pagination
+  .pagination-wrapper
+    .pagination__item
+      +use('arrow-left', '32', '32', '#' + jColorIcons, '')
+    .pagination__item 1
+    .pagination__item.pagination__item--active 2
+    .pagination__item 3
+    .pagination__item 4
+    .pagination__item 5
+    .pagination__item 6
+    .pagination__item
+      +use('arrow-right', '32', '32', '#' + jColorIcons, '')
+  
+link(rel='stylesheet' href='blocks/pagination/pagination.css')
+  
+  

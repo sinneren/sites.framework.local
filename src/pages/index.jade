@@ -1,0 +1,99 @@
+- var jTitle = 'Main Page'
+- var jColorIcons = '4990e2'
+include ../system/_vars
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include ../blocks/head/head
+  body
+    include ../blocks/header/header
+    include ../blocks/demo-slider/demo-slider
+    - var jColorLeads = 'FFF'
+    mixin navContent
+        nav.navigation__nav
+            ul.navigation__menu
+                li.navigation__menu-item
+                    a(href="#").navigation__menu-link
+                        +use('mail', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                        .navigation__menu-text Отправить сообщение
+                li.navigation__menu-item
+                    a(href="#").navigation__menu-link
+                        +use('note', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                        .navigation__menu-text Добавить заявку
+                li.navigation__menu-item
+                    a(href="#").navigation__menu-link
+                        +use('calc', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                        .navigation__menu-text Рассчитать ипотеку
+        label.navigation__control
+            input(type='checkbox')#navigation
+            .navigation__control-view
+    include ../blocks/navigation/_navigation
+    include ../blocks/filter/filter
+    - var jTitleBlock = 'Популярные ЖК'
+    - var jTitleBtn = 'Подробнее'
+    - var jSliderMasterClass = 'popular'
+    include ../blocks/slider/slider
+    script.
+      $(document).ready(function () {
+        var popular = new Swiper ('.popular', {
+          direction: 'horizontal',
+          loop: true,
+          autoHeight: true,
+          nextButton: '.slider-next',
+          prevButton: '.slider-prev',
+          spaceBetween: 20,
+          slidesPerView: 3,
+          breakpoints: {
+              1024: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+              }
+          }
+        });
+      });
+    include ../blocks/news-list-main/news-list-main
+    - var jTitleBlock = 'Горячие предложения'
+    - var jTitleBtn = 'Все предложения'
+    - var jSliderMasterClass = 'hot-offer'
+    include ../blocks/slider/slider
+    script.
+      $(document).ready(function () {
+        var hotOffer = new Swiper ('.hot-offer', {
+          direction: 'horizontal',
+          loop: true,
+          autoHeight: true,
+          nextButton: '.slider-next',
+          prevButton: '.slider-prev',
+          spaceBetween: 20,
+          slidesPerView: 3,
+          breakpoints: {
+              1024: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+              }
+          }
+        });
+        card.init();
+      });
+    include ../blocks/benefits/benefits
+    mixin navContent
+        img(src="/img/logo.png", alt="" width="50" height="50").navigation__logo
+        .navigation__title Estate <br>Agency
+        nav.navigation__nav.navigation__nav--right
+          ul.navigation__menu
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('mail', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Отправить сообщение
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('note', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Добавить заявку
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('calc', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Рассчитать ипотеку
+    include ../blocks/navigation/_navigation
+    include ../blocks/footer/footer
+    include ../blocks/last/last

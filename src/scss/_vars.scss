@@ -1,0 +1,62 @@
+$vr: 8px;
+$width: 960px;
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: $width,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: border-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: overlay,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+/*Colors*/
+$color_main: #4990E2;
+$color_second: #7ED321;
+$color_info: #F6A623;
+$color_err: #D0011B;
+$color_ext1: #4A4A4A;
+$color_ext2: #FFFFFF;
+$color_ext3: #D8D8D8;
+$color_fullblk: #000;
+
+/*Pixels*/
+$borderRadius: 4px;
+$imgBrad: $borderRadius;
+
+/*Fonts*/
+$ff:
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+    // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+    system-ui,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    "Segoe UI",
+    // Android
+    "Roboto",
+    // Basic web fallback
+    "Helvetica Neue", Arial, sans-serif !default;
+$fz: 16px;
+
+/*BP*/
+$tabletBP: 1024px;
+$mobileBP: 768px;

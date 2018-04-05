@@ -1,0 +1,39 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 6, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+.slider {
+  padding-bottom: 48px; }
+  /* line 16, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider .container {
+    position: relative; }
+  /* line 19, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider .card {
+    width: 100%;
+    margin-bottom: 48px;
+    margin-right: 0; }
+    /* line 23, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+    .slider .card:nth-child(3n+3) {
+      margin-right: 0; }
+  /* line 27, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider-prev, .slider-next {
+    top: 50%;
+    position: absolute;
+    margin-top: -24px;
+    cursor: pointer; }
+  /* line 37, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider-prev {
+    left: -96px; }
+  /* line 40, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider-next {
+    right: -96px; }
+  @media (min-width: 0) and (max-width: 1024px) {/* line 6, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider {
+    padding-left: 20px;
+    padding-right: 20px; }/* line 27, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider-prev, .slider-next {
+    display: none; }/* line 43, C:/work/assembly/sites.framework.local/src/blocks/slider/slider.scss */
+  .slider .hot-offer__title {
+    font-size: 24px;
+    line-height: 1.33; } }

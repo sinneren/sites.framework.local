@@ -1,0 +1,56 @@
+- var jTitle = 'UI Page'
+- var jColorIcon = 'FFFFFF'
+- var jRangeID = 'j-range'
+include ../system/_mixins
+include ../system/_vars
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include ../blocks/head/head
+  body
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      include ../blocks/range/range
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      include ../blocks/check-counter/check-counter
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      button.button.button-lg Large
+      button.button.button-md Middle
+      button.button Normal
+      button.button.button-sm Small
+      button.button.is-disabled(disabled) Disabled
+      button.button.button-md.has-icon 
+        +use('search', '32', '32', '#' + jColorIcon, 'button-icon')
+        | Icon
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      button.button.button-lg.button-blank Large
+      button.button.button-md.button-blank Middle
+      button.button.button-blank Normal
+      button.button.button-sm.button-blank Small
+      button.button.button-blank.is-disabled(disabled) Disabled
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      .ui-input
+        input(placeholder='Placeholder')
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      .ui-input.is-invalid
+        input(placeholder='Placeholder')
+        .ui-input-msg Lipsum err text
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      .ui-input
+        textarea(placeholder='Placeholder')
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      .ui-input.has-postfix
+        input(placeholder='Placeholder')
+        +use('search', '32', '32', '#' + jColor, 'ui-input-postfix')
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      .ui-input.has-prefix
+        input(placeholder='Placeholder')
+        +use('search', '32', '32', '#' + jColor, 'ui-input-prefix')
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      .ui-input.has-prefix.has-postfix
+        input(placeholder='Placeholder')
+        +use('search', '32', '32', '#' + jColor, 'ui-input-prefix')
+        +use('search', '32', '32', '#' + jColor, 'ui-input-postfix')
+    div(style="margin-top: 8px; margin-bottom: 8px")
+      include ../blocks/card/card
+    include ../blocks/last/last

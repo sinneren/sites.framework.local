@@ -1,0 +1,422 @@
+$inputFZ: 13px;
+$inputBR: $borderRadius;
+$inputSidePadding: 12px;
+$inputHeight: $vr * 4;
+$inputIconSize: $inputHeight;
+$btnBRad: $borderRadius;
+$btnSidePadding: $vr * 2;
+$selectBR: $borderRadius;
+$selectBG: $color_ext2;
+
+.ui {
+  &-input {
+    position: relative;
+    display: block;
+    @include cfx();
+    textarea,
+    input {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: $inputHeight;
+      float: left;
+      padding: {
+        left: $inputSidePadding;
+        right: $inputSidePadding;
+        top: $vr / 2;
+        bottom: $vr / 2;
+      }
+      border-radius: $inputBR;
+      background-color: $color_ext2;
+      border: solid 1px #979797;
+      outline: none;
+      font: {
+        family: $ff;
+        size: $inputFZ;
+      }
+      vertical-align: middle;
+      line-height: 1.71;
+      color: $color_ext1;
+      @include placeholder {
+        font: {
+          size: 14px;
+          family: $ff;
+          style: italic;
+        }
+        line-height: 1.71;
+        color: #9B9B9B;
+      }
+      &:hover {
+        border-color: $color_main;
+        & ~ .ui-input-postfix,
+        & ~ .ui-input-prefix {
+          border-color: $color_main;
+        }
+      }
+      &:focus,
+      &:active {
+        border-color: $color_second;
+        & ~ .ui-input-postfix,
+        & ~ .ui-input-prefix {
+          border-color: $color_second;
+        }
+      }
+    }
+    textarea {
+      max-width: 100%;
+      min-height: $vr * 10;
+    }
+    &.has-postfix {
+      input {
+        padding-right: $inputSidePadding / 2 + $inputIconSize;
+      }
+    }
+    &.has-prefix {
+      input {
+        padding-left: $inputSidePadding / 2 + $inputIconSize;
+      }
+    }
+    &.is-invalid {
+      input, textarea {
+        border-color: $color_err;
+      }
+      .ui-input-msg {
+        display: block;
+        color: $color_err;
+      }
+    }
+    &-postfix {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+    &-prefix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    &-msg {
+      display: none;
+      margin-top: 5px;
+      float: left;
+      clear: both;
+      font: {
+        family: $ff;
+        size: 12px;
+        weight: 500;
+      }
+      line-height: 1.33;
+    }
+    &--split {
+      width: 240px;
+      margin-bottom: $vr * 2;
+      input {
+        width: 50%;
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0;
+          &:hover,
+          &:focus {
+            border-right: 1px solid;
+            & + input {
+              border-left: 0;
+            }
+          }
+          &:hover {
+            border-right-color: $color_main;
+          }
+          &:focus {
+            border-right-color: $color_second;
+          }
+        }
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}
+.button {
+  display: inline-block;
+  height: $vr * 4;
+  padding: {
+    left: $btnSidePadding;
+    right: $btnSidePadding;
+    top: $vr;
+    bottom: $vr;
+  }
+  font: {
+    family: $ff;
+    size: 14px;
+    weight: 500;
+  }
+  background-color: $color_main;
+  color: $color_ext2;
+  border-radius: $btnBRad;
+  line-height: 1.14;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color_main, 14%);
+  }
+  &[disabled],
+  &.disabled {
+    opacity: 0.5;
+    cursor: default;
+    &:hover {
+      background-color: $color_main;
+    }
+  }
+  &.has-icon {
+    padding-left: 8px;
+  }
+  &-blank {
+    background-color: $color_ext2;
+    color: $color_main;
+    border: 1px solid $color_main;
+    &:hover {
+      background-color: darken($color_ext2, 7%);
+    }
+    &[disabled],
+    &.disabled {
+      &:hover {
+        background-color: $color_ext2;
+      }
+    }
+  }
+  &-second {
+    background-color: $color_second;
+    &:hover {
+      background-color: darken($color_second, 7%);
+    }
+  }
+  &-sm {
+    height: $vr * 2;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+    font: {
+      size: 13px;
+    }
+    line-height: 1.23;
+  }
+  &-md {
+    height: $vr * 6;
+    font: {
+      size: 18px;
+    }
+    line-height: 1.78;
+  }
+  &-lg {
+    height: $vr * 8;
+    padding: {
+      top: $vr * 2;
+      bottom: $vr * 2;
+    }
+    font: {
+      size: 24px;
+    }
+    line-height: 1.33;
+  }
+  &-icon {
+    float: left;
+  }
+  &--full {
+      width: 100%;
+  }
+}
+.select2 {
+  width: 100%;
+  &-hidden-accessible {
+    display: none;
+  }
+  &-dropdown {
+    display: block;
+  }
+  &-container {
+    display: block;
+    border-radius: $selectBR;
+    background-color: $selectBG;
+    border: solid 1px #979797;
+    &--open,
+    &--focus {
+      outline: none;
+      border-color: $color_second;
+    }
+    &--disabled {
+      background-color: rgba($color_fullblk, 0.03);
+    }
+    &:hover {
+      border-color: $color_main;
+    }
+    .selection {
+      display: block;
+      width: 100%;
+      outline: none;
+    }
+  }
+  &-selection {
+    position: relative;
+    display: block;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    &__rendered {
+      display: block;
+      width: 100%;
+      padding: 5px 32px 3px 12px;
+      height: $vr * 4 - 2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      outline: none;
+      font: {
+        family: $ff;
+        size: 13px;
+      }
+      line-height: 1.85;
+      text-align: left;
+      color: $color_ext1;
+    }
+    &__arrow {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 0;
+      right: 0;
+      background: url('/img/icons/bg/angle-down.png') no-repeat;
+      @include retina2 {
+        background: url('/img/icons/bg/angle-down@2x.png') no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  &-search {
+    &--hide {
+      display: none;
+    }
+  }
+  &-results {
+    &__options {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    &__option {
+      padding: {
+        left: 16px;
+        right: 16px;
+      }
+      font: {
+        family: $ff;
+        size: 14px;
+      }
+      line-height: 2.29;
+      text-align: left;
+      color: $color_ext1;
+      cursor: pointer;
+      &--highlighted {
+        background-color: rgba($color_fullblk, 0.05);
+      }
+    }
+  }
+}
+.toggle-btn {
+  @include cfx();
+  width: 280px;
+  border: solid 1px $color_main;
+  background-color: $color_ext2;
+  border-radius: $borderRadius;
+  overflow: hidden;
+  &__item {
+    display: block;
+    float: left;
+    width: 50%;
+    height: $inputHeight - 2;
+    border-radius: $borderRadius;
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + .toggle-btn__view {
+       background-color: $color_main;
+       color: $color_ext2;
+       font: {
+         weight: 500;
+       }
+    }
+    &.is-active {
+        .toggle-btn__view {
+            background-color: $color_main;
+            color: $color_ext2;
+            font: {
+              weight: 500;
+            }
+        }
+    }
+  }
+  &__view {
+    display: block;
+    background-color: $color_ext2;
+    padding: {
+      top: 7px;
+      bottom: 7px;
+    }
+    font: {
+      size: 16px;
+      family: $ff;
+    }
+    line-height: 1.13;
+    color: $color_main;
+    text: {
+        align: center;
+        decoration: none;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $color_main;
+      color: $color_ext2;
+      font: {
+        weight: 500;
+      }
+    }
+  }
+}
+.no-image {
+  width: 128px;
+  height: 128px;
+  background: {
+    image: url('/img/noimage.png');
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  @include retina2 {
+    background-image: url('/img/noimage@2x.png');
+  }
+}
+.select-helper {
+  & + .select2 {
+    float: right;
+    .select2-selection__arrow {
+      display: none;
+    }
+    .select2-selection__rendered {
+      padding: {
+        top: 4px;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+      }
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mixin use(name, w, h, fillclr, modifer)
+  svg(role="img" class="svg-icon #{name} #{modifer}" width="#{w}" height="#{h}" fill="#{fillclr}")
+    use(xlink:href="img/sprites/sprite.symbols.svg##{name}")
+mixin usecard(name, w, h, modifer)
+  svg(role="img" class="svg-icon #{name} #{modifer}" width="#{w}" height="#{h}")
+    use(xlink:href="img/sprites/sprite.card.svg##{name}")

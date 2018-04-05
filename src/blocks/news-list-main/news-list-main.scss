@@ -1,0 +1,53 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+.news-list-main {
+  background-color: rgba($color_fullblk, 0.03);
+  padding: {
+    top: $vr * 3;
+  }
+  @include susy-breakpoint(0 $tabletBP) {
+      display: none;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+  }
+  &__title {
+    margin: 0;
+    float: left;
+    @include susy-breakpoint(0 $tabletBP) {
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+  &__button {
+    float: right;
+    margin: {
+      top: $vr * 2
+    }
+  }
+  .news-list__item {
+    @include span(4);
+    margin: {
+      top: $vr * 4
+    }
+    &:last-child,
+    &:last-of-type {
+      @include last;
+    }
+    .news-list__content {
+      max-height: $vr * 8 - 2;
+      padding-bottom: 0;
+      margin: {
+        bottom: $vr * 2;
+      }
+      line-height: 1.23;
+      font: {
+        size: 13px;
+      }
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+.social {
+    @include cfx();
+    margin-top: 34px;
+    &__link {
+        float: left;
+        margin-right: 9px;
+    }
+}

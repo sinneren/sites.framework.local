@@ -1,0 +1,87 @@
+include ../../system/_mixins
+include ../../system/_vars
+
+section.map
+  div#map-container(style="width: 100%; height: 832px")
+link(rel='stylesheet' href='blocks/map/map.css')
+script(type='text/javascript' src='https://api-maps.yandex.ru/2.1/?lang=ru_RU') 
+script(type='text/javascript' src='blocks/map/map.js')
+script(type='text/javascript').
+  //- var data = {
+  //-   "type":"FeatureCollection",
+  //-   "features": [
+  //-     {
+  //-       "type":"Feature",
+  //-       "id":0,
+  //-       "geometry":{
+  //-         "type":"Point",
+  //-         "coordinates": [
+  //-           55.765229, 37.618254
+  //-         ]
+  //-       },
+  //-       "properties":{
+  //-         "balloonContent":"Содержимое балуна",
+  //-         "clusterCaption":"Дом 1",
+  //-         "hintContent":"Текст подсказки",
+  //-         "cost":"10 000",
+  //-         "metro":"Тимирязевская",
+  //-         "address": "ул. Кремлевская, 12",
+  //-         "link" : "object.html",
+  //-         "pic": "img/picture_0024.jpg",
+  //-         "currency": "₽"
+  //-       }
+  //-     },
+  //-     {
+  //-       "type":"Feature",
+  //-       "id":1,
+  //-       "geometry":{
+  //-         "type":"Point",
+  //-         "coordinates": [
+  //-           55.814621, 37.586840
+  //-         ]
+  //-       },
+  //-       "properties":{
+  //-         "balloonContent":"Содержимое балуна",
+  //-         "clusterCaption":"Дом 1",
+  //-         "hintContent":"Текст подсказки",
+  //-         "cost":"10 000",
+  //-         "metro":"Тимирязевская",
+  //-         "address": "ул. Кремлевская, 12",
+  //-         "link" : "object.html",
+  //-         "pic": "img/picture_0024.jpg",
+  //-         "currency": "₽"
+  //-       }
+  //-     },
+  //-     {
+  //-       "type":"Feature",
+  //-       "id":2,
+  //-       "geometry":{
+  //-         "type":"Point",
+  //-         "coordinates": [
+  //-           55.814621, 37.586840
+  //-         ]
+  //-       },
+  //-       "properties":{
+  //-         "balloonContent":"Содержимое балуна",
+  //-         "clusterCaption":"Дом 2",
+  //-         "hintContent":"Текст подсказки",
+  //-         "cost":"10 000",
+  //-         "metro":"Тимирязевская",
+  //-         "address": "ул. Кремлевская, 12",
+  //-         "link" : "object.html",
+  //-         "pic": "img/picture_0024.jpg",
+  //-         "currency": "₽"
+  //-       }
+  //-     }
+  //-   ]
+  //- }
+  mapYandex.init({
+    selector: 'map-container',
+    coords: [54.72064650443887,55.94199260093901],
+    zoom: 14,
+    objectsUrl: 'http://perspektivaufa.tmweb.ru/test/for-demo/cords.php?bounds=',
+    detailsUrl: 'http://perspektivaufa.tmweb.ru/test/for-demo/data.php?id=',
+    container: '.map',
+    counterContainer: '#map-counter'
+    //data: data
+  });

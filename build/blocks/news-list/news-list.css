@@ -1,0 +1,55 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 5, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+.news-list {
+  margin-top: 48px; }
+  /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .news-list:after, .news-list:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 10, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+  .news-list.first-detail .news-list__item:first-child {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 48px;
+    clear: both; }
+    /* line 16, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+    .news-list.first-detail .news-list__item:first-child .news-list__pic {
+      width: 300px;
+      height: 240px; }
+    /* line 20, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+    .news-list.first-detail .news-list__item:first-child .news-list__content {
+      max-width: none;
+      max-width: initial;
+      font-family: -apple-system, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      font-line-height: 1.6;
+      clear: none;
+      clear: initial; }
+    /* line 30, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+    .news-list.first-detail .news-list__item:first-child .news-list__date {
+      position: absolute;
+      bottom: 16px;
+      left: 316px; }
+  /* line 39, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+  .news-list .agents .news-list__pic {
+    width: 128px;
+    height: 128px;
+    clear: both; }
+  /* line 44, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+  .news-list .agents .news-list__title {
+    font-size: 30px;
+    line-height: 32px;
+    color: #4A4A4A;
+    clear: both; }
+  /* line 50, C:/work/assembly/sites.framework.local/src/blocks/news-list/news-list.scss */
+  .news-list .agents .news-list__subtitle {
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4A4A4A;
+    clear: both; }

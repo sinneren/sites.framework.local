@@ -1,0 +1,51 @@
+- var jTitle = 'Main Page'
+- var jColorIcons = '4990e2'
+include ../system/_vars
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include ../blocks/head/head
+  body
+    include ../blocks/header/header
+    include ../blocks/breadcrumbs/breadcrumbs
+    .news-detail
+        .container
+            - var newsListItemPic = '/res/full_3l8de4uv27_cf5f99dd.jpg'
+            h1 Мы обновили наш сайт: интеграция с ReCRM
+            include ../blocks/news-list-item/news-list-item
+        - var jTitleBlock = 'Горячие предложения'
+        - var jTitleBtn = 'Все предложения'
+        include ../blocks/slider/slider
+    script.
+      $(document).ready(function () {
+        var hotOffer = new Swiper ('.swiper-container', {
+          direction: 'horizontal',
+          loop: true,
+          autoHeight: true,
+          nextButton: '.slider-next',
+          prevButton: '.slider-prev',
+          spaceBetween: 00
+        });
+        card.init();
+      });
+    mixin navContent
+        img(src="/img/logo.png", alt="" width="50" height="50").navigation__logo
+        .navigation__title Estate <br>Agency
+        nav.navigation__nav.navigation__nav--right
+          ul.navigation__menu
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('mail', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Отправить сообщение
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('note', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Добавить заявку
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('calc', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Рассчитать ипотеку
+    include ../blocks/navigation/_navigation
+    include ../blocks/footer/footer
+    include ../blocks/last/last

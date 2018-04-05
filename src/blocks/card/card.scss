@@ -1,0 +1,225 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$cardBR: 10px;
+$layerZindex: 1;
+.card {
+  @include span(4 of 12);
+  position: relative;
+  background-color: $color_ext2;
+  border: solid 1px #eeeeee;
+  border-radius: $cardBR;
+  box-shadow: 0 1px 6px 0 rgba($color_fullblk, 0.03);
+  overflow: hidden;
+  color: $color_ext1;
+  font-size: 16px;
+  line-height: 1.5;
+  &:hover {
+    box-shadow: 0 4px 12px 0 rgba($color_fullblk, 0.06);
+    .card__promo {
+      &-item {
+        transform: translateX(0);
+      }
+    }
+    .card__overlay,
+    .card__media,
+    .card__promo-text {
+      opacity: 1;
+    }
+  }
+  @include susy-breakpoint(0 $tabletBP) {
+      @include span(12);
+  }
+  &__pic {
+    position: relative;
+    width: 100%;
+    height: 192px;
+    background-color: $color_main;
+    .no-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__content {
+    padding: {
+      top: $vr * 2;
+      bottom: $vr * 2;
+      left: $vr * 2;
+      right: $vr * 2;
+    }
+    text: {
+      align: left;
+    }
+    &-row {
+        padding: {
+            top: $vr;
+            bottom: $vr;
+        }
+        @include cfx();
+        & + & {
+            border-top: 1px solid rgba($color_fullblk, 0.1);
+        }
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+  }
+  &__title {
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+    font: {
+      size: 20px;
+      weight: bold;
+    }
+    line-height: 1.2;
+    color: $color_ext1;
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $layerZindex;
+  }
+  &__price {
+    float: left;
+    font: {
+      size: 24px;
+    }
+    line-height: 2;
+    color: $color_ext1;
+    white-space: nowrap;
+    &-param {
+        clear: both;
+        font-weight: bold;
+        line-height: 2;
+    }
+  }
+  &__text {
+    font: {
+      size: 13px;
+    }
+    text-align: left;
+    line-height: 1.23;
+    color: $color_ext1;
+  }
+  &__location {
+    font-size: 16px;
+    line-height: 2;
+    color: $color_ext1;
+    &-icon {
+      float: left;
+    }
+  }
+  &__compare {
+    float: left;
+    position: relative;
+    z-index: $layerZindex + 1;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.78;
+    color: $color_ext1;
+    &-icon {
+      float: left;
+    }
+    &-text {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 1.78;
+      color: $color_ext1;
+    }
+  }
+  &__id {
+    float: right;
+    font: {
+      size: 14px;
+      weight: bold;
+    }
+    line-height: 2.29;
+    color: #9B9B9B;
+  }
+  &__overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color_fullblk, 0.5);
+    transition: opacity 300ms ease;
+  }
+  &__promo {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: $layerZindex + 2;
+    &-item {
+      display: block;
+      margin-bottom: $vr;
+      @include cfx();
+      clear: both;
+    }
+    &-pic {
+      float: left;
+    }
+    &-text {
+      display: block;
+      float: left;
+      margin: {
+        top: $vr / 2;
+        left: $vr;
+      }
+      font: {
+        size: 15px;
+        weight: bold;
+      }
+      line-height: 1.6;
+      color: $color_ext2;
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+  }
+  &__media {
+    position: absolute;
+    opacity: 0;
+    bottom: 51px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    &-item {
+      display: inline-block;
+      margin: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+    &-icon {
+      float: left;
+    }
+    &-text {
+      float: left;
+      font: {
+        size: 14px;
+        weight: bold;
+      }
+      line-height: 2.29;
+      color: $color_ext2;
+    }
+  }
+}

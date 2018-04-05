@@ -1,0 +1,94 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 9, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+.cluster-icon {
+  width: 48px;
+  height: 48px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: -apple-system, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  text-align: center; }
+
+/* line 19, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+.placemark-icon {
+  width: 48px;
+  height: 48px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none" fill-rule="evenodd"><path fill="#4990E2" d="M24 48s16-16 16-28c0-8.837-7.163-16-16-16S8 11.163 8 20c0 12 16 28 16 28z"/><circle cx="24" cy="20" r="12" fill="#FFF"/><circle cx="24" cy="20" r="8" fill="#7ED321"/></g></svg>');
+  background-position: center;
+  background-repeat: no-repeat; }
+
+/* line 28, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+.map {
+  position: relative; }
+  /* line 30, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+  .map-counter {
+    position: absolute;
+    width: 220px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, .4);
+    color: #FFFFFF;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    z-index: 2; }
+
+/* line 45, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+.balloon {
+  position: relative;
+  width: 320px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+  overflow: hidden; }
+  /* line 52, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+  .balloon__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(48deg, transparent, rgba(0, 0, 0, .5));
+    background-image: linear-gradient(42deg, transparent, rgba(0, 0, 0, .5)); }
+  /* line 62, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+  .balloon__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    z-index: 2;
+    cursor: pointer;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\a     <path fill="#FFF" fill-rule="evenodd" d="M23 10.41L21.59 9 16 14.59 10.41 9 9 10.41 14.59 16 9 21.59 10.41 23 16 17.41 21.59 23 23 21.59 17.41 16z"/>\a     </svg>'); }
+  /* line 74, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+  .balloon__pic {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 192px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  /* line 83, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+  .balloon__property {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    margin-right: 16px; }
+    /* line 90, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+    .balloon__property-item {
+      padding-top: 8px;
+      padding-bottom: 8px; }
+      /* line 95, C:/work/assembly/sites.framework.local/src/blocks/map/map.scss */
+      .balloon__property-item + .balloon__property-item {
+        border-top: 1px solid rgba(0, 0, 0, .1); }

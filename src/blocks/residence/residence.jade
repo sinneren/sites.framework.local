@@ -1,0 +1,75 @@
+include ../../system/_mixins
+include ../../system/_vars
+
+.object.residence
+    .container
+        .object-row
+            h1.object__title 
+                strong Жилой Комплекс 
+                |  Новый Татуин
+        .object__header
+            .object__toggler 
+                .toggle-btn
+                    .toggle-btn__item.is-active
+                        span.toggle-btn__view Описание
+                    .toggle-btn__item
+                        a.toggle-btn__view(href='javascript:void(0);') Объекты
+            .object__contacts
+                button.button.button-second +7 ... показать номер
+        .clearfix
+            .object__slider
+                include ../object-slider/fotorama
+            .object__params
+                table.object__params-list
+                    tr
+                        td.object__params-icon 
+                            +use('geo', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Ломоносовский просект
+                    tr
+                        td.object__params-icon 
+                            +use('metro', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Метро:
+                            |  Динамо
+                    tr
+                        td.object__params-icon 
+                            +use('address', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Район:
+                            |  ЦАО
+                    tr
+                        td.object__params-icon 
+                            +use('parking', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Парковка:
+                            |  Подземная
+                    tr
+                        td.object__params-icon 
+                            +use('fence', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Территория:
+                            |  огороженная
+                    tr
+                        td.object__params-icon 
+                            +use('guard', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Охрана:
+                            |  круглосуточная
+                    tr
+                        td.object__params-icon 
+                            +use('infro', '32', '32', '#4990e2', '')
+                        td.object__params-value 
+                            span.object__params-title Инфраструктура:
+                            |  кафе, рестораны
+        .object__actions
+            .pull--left
+                a(href='#').object__actions-item
+                    +use('visibility', '32', '32', '#4990e2', 'navigation__menu-icon')
+                    span Заказать просмотр
+                a(href='#').object__actions-item
+                    +use('reader', '32', '32', '#4990e2', 'navigation__menu-icon')
+                    span Скачать презентацию
+        .object__description
+            p Spend some quality time with the room you are going to put your new home theater audio system. Believe it or not but the room is as much a component in your home theater system as any of the electronics you will ever buy. Ask yourself which room you will be putting your new system in. Consider whether or not this room is going to be used solely for you system or will it be used for other activities. Will there be any size considerations for the components and speakers you plan on using with the dimensions of the room?
+link(rel='stylesheet' href='blocks/object/object.css')

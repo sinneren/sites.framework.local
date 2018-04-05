@@ -1,0 +1,52 @@
+include ../../system/_mixins
+include ../../system/_vars
+footer.footer
+  .container
+    ul.footer__nav
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Компания
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Вакансии
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Контакты
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Новости
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Партнеры
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Руководитель
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Команда
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Отзывы
+    ul.footer__nav
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Услуги
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Избранное
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Элитные жилые комплексы
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Спецпредложения
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Жилая
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Загородная
+      li.footer__nav-item
+        a.footer__nav-link(href='#') Коммерческая
+    .footer__contacts
+      include ../phone/phone
+      div
+        a.button.button-sm(href='#') Обратный звонок
+      .footer__search
+        .ui-input.has-postfix
+          input(type='search' placeholder='Поиск')
+          +use('search', '32', '32', '#' + jColor, 'ui-input-postfix')
+      include ../social/social
+  .footer__divider
+  .footer__rights
+    .container
+      div Настоящий сайт и представленные на нем материалы носят информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. 
+      div &copy; Агентство недвижимости "The Expendables Realtors" Разработано в Site-Mechanics
+    
+link(rel='stylesheet' href='blocks/footer/footer.css')

@@ -1,0 +1,208 @@
+
+<section class="filter">
+  <div class="filter__mobile-name">Фильтр</div>
+  <svg role="img" width="48" height="48" fill="#4990e2" class="svg-icon close filter__close">
+    <use xlink:href="img/sprites/sprite.symbols.svg#close"></use>
+  </svg>
+  <div class="container">
+    <div class="filter__cell">
+      <div class="filter__label">Я хочу</div>
+      <div class="filter__control">
+        <div class="toggle-btn">
+          <label class="toggle-btn__item">
+            <input type="radio" name="deal" checked="checked"/>
+            <div class="toggle-btn__view">Купить</div>
+          </label>
+          <label class="toggle-btn__item">
+            <input type="radio" name="deal"/>
+            <div class="toggle-btn__view">Продать</div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Недвижимость</div>
+      <div class="filter__control">
+        <div class="select-dropdown">
+          <input type="hidden" value="0" name="d-type" data-sd="mainparam"/>
+          <input type="hidden" value="3" name="ds-type" data-sd="subparam"/>
+          <select class="select-dropdown__select select">
+            <option value="0">Жилая</option>
+            <option value="1" selected="selected">Коммерческая</option>
+          </select>
+          <div class="select-dropdown__control"><span class="select-dropdown__text">Квартира</span>
+            <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon radio-true-copy select-dropdown__icon">
+              <use xlink:href="img/sprites/sprite.symbols.svg#radio-true-copy"></use>
+            </svg>
+          </div>
+          <div class="select-dropdown__popup">
+            <div class="select-dropdown__row">
+              <div class="select-dropdown__col">&nbsp;</div>
+              <div class="select-dropdown__col">
+                <div class="toggler__wrapper">
+                  <div data-mainParam="0" class="select-dropdown__toggler select-dropdown__toggler--active">все</div>
+                  <div data-mainparam="1" class="select-dropdown__toggler">первичная</div>
+                  <div data-mainparam="2" class="select-dropdown__toggler">вторичная</div>
+                </div>
+              </div>
+            </div>
+            <div data-select="0" class="select-dropdown__row select-dropdown__row--active">
+              <div class="select-dropdown__col">Жилая</div>
+              <div class="select-dropdown__col">
+                <div data-subparam="1" class="select-dropdown__checkin">Дом</div>
+                <div data-subparam="2" class="select-dropdown__checkin">Квартира</div>
+                <div data-subparam="3" class="select-dropdown__checkin select-dropdown__checkin--active">Коттеджи</div>
+                <div data-subparam="4" class="select-dropdown__checkin">Таунхаусы</div>
+                <div data-subparam="5" class="select-dropdown__checkin">Земельные участки</div>
+              </div>
+            </div>
+            <div data-select="1" class="select-dropdown__row">
+              <div class="select-dropdown__col">Коммерческая</div>
+              <div class="select-dropdown__col">
+                <div data-subparam="6" class="select-dropdown__checkin">Офис</div>
+                <div data-subparam="7" class="select-dropdown__checkin">Гараж</div>
+                <div data-subparam="8" class="select-dropdown__checkin">Склад</div>
+                <div data-subparam="9" class="select-dropdown__checkin">Производство</div>
+                <div data-subparam="10" class="select-dropdown__checkin">Земельные участки</div>
+                <div data-subparam="11" class="select-dropdown__checkin">Инвестпроект</div>
+                <div data-subparam="12" class="select-dropdown__checkin">Торговля</div>
+                <div data-subparam="13" class="select-dropdown__checkin">Общепит</div>
+                <div data-subparam="14" class="select-dropdown__checkin">Отдельное стоящее здание</div>
+                <div data-subparam="15" class="select-dropdown__checkin">Помещение свободного назначения</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Стоимость</div>
+      <div class="filter__control filter__control--wide">
+        <select width="40px" data-width="40px" class="select-helper">
+          <option>₽</option>
+          <option>$</option>
+        </select>
+        <div class="ui-input ui-input--split">
+          <input data-range="price-min" class="input-split"/>
+          <input data-range="price-max" class="input-split"/>
+        </div>
+        <div class="range">
+          <div id="j-range-price" class="range-slider"></div>
+        </div>
+        <link rel="stylesheet" href="js/vendors/nouislider/nouislider.min.css"/>
+        <link rel="stylesheet" href="blocks/range/range.css"/>
+        <script src="js/vendors/nouislider/wNumb.js"></script>
+        <script src="js/vendors/nouislider/nouislider.min.js"></script>
+        <script src="blocks/range/range.js"></script>
+        <script>
+          handlesSlider.init({
+            selector: "j-range-price",
+            inputs: [
+              $('[data-range="price-min"]'),
+              $('[data-range="price-max"]')
+            ]
+          });
+        </script>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Жилой комплекс</div>
+      <div class="filter__control">
+        <select name="" placeholder="Все" style="width: 100%" class="select">
+          <option>Квартира</option>
+          <option>Дом</option>
+          <option>Гараж</option>
+          <option>Таунхаус</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Район</div>
+      <div class="filter__control"> 
+        <select name="" placeholder="Район" style="width: 100%" class="select">
+          <option>Петроградский</option>
+          <option>Приморский</option>
+          <option>Невский</option>
+          <option>Московский</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Площадь</div>
+      <div class="filter__control filter__control--wide">
+        <select width="40px" data-width="40px" disabled="disabled" class="select-helper">
+          <option selected="selected">м²</option>
+        </select>
+        <div class="ui-input ui-input--split">
+          <input data-range="square-min" class="input-split"/>
+          <input data-range="square-max" class="input-split"/>
+        </div>
+        <div class="range">
+          <div id="j-range-meter" class="range-slider"></div>
+        </div>
+        <link rel="stylesheet" href="js/vendors/nouislider/nouislider.min.css"/>
+        <link rel="stylesheet" href="blocks/range/range.css"/>
+        <script src="js/vendors/nouislider/wNumb.js"></script>
+        <script src="js/vendors/nouislider/nouislider.min.js"></script>
+        <script src="blocks/range/range.js"></script>
+        <script>
+          handlesSlider.init({
+            selector: "j-range-meter"
+            ,
+            inputs: [
+              $('[data-range="square-min"]'),
+              $('[data-range="square-max"]')
+            ]
+          });
+        </script>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Количество комнат</div>
+      <div class="filter__control"> 
+        <div class="check-counter">
+          <label class="check-counter__item">
+            <input type="checkbox" name="rooms[]" value="1" class="check-counter__checkbox"/>
+            <div class="check-counter__view">1</div>
+          </label>
+          <label class="check-counter__item">
+            <input type="checkbox" name="rooms[]" value="2" class="check-counter__checkbox"/>
+            <div class="check-counter__view">2</div>
+          </label>
+          <label class="check-counter__item">
+            <input type="checkbox" name="rooms[]" value="3" class="check-counter__checkbox"/>
+            <div class="check-counter__view">3</div>
+          </label>
+          <label class="check-counter__item">
+            <input type="checkbox" name="rooms[]" value="4" class="check-counter__checkbox"/>
+            <div class="check-counter__view">4</div>
+          </label>
+          <label class="check-counter__item">
+            <input type="checkbox" name="rooms[]" value="5" class="check-counter__checkbox"/>
+            <div class="check-counter__view">5</div>
+          </label>
+        </div>
+        <link rel="stylesheet" href="blocks/check-counter/check-counter.css"/>
+      </div>
+    </div>
+    <div class="filter__cell">
+      <div class="filter__label">Выберите метро<a href="#" class="button button-sm pull--right">Схема</a></div>
+      <div class="filter__control">
+        <select name="" placeholder="Любое" style="width:100%" class="select">
+          <option>Петроградская</option>
+          <option>Горьковская</option>
+          <option>Невский проспект</option>
+          <option>Московская</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter__submit text--center"><a href="#" class="button button-md button-second">Подобрать</a></div>
+  </div>
+</section>
+<link rel="stylesheet" href="blocks/filter/filter.css"/>
+<script src="blocks/filter/filter.js"></script>
+<script>
+  filterBlock.init({
+    selector: '.filter'
+  });
+</script>

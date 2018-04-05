@@ -1,0 +1,77 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$footerBlocksMargin: 44px;
+
+.footer {
+  padding: {
+    top: $vr * 4;
+    bottom: 92px;
+  }
+  @include susy-breakpoint(0 $tabletBP) {
+      padding: {
+          left: 20px;
+          right: 20px;
+      }
+  }
+  &__nav {
+    display: block;
+    float: left;
+    margin: {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: $footerBlocksMargin;
+    }
+    padding: 0;
+    list-style-type: none;
+    vertical-align: top;
+    &-link {
+      font: {
+        size: 18px;
+      }
+      line-height: 1.78;
+      color: #000000;
+      text: {
+        decoration: none;
+      }
+      &:hover {
+        color: #3B7ADB;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__contacts {
+    @include span(4 no-gutters);
+    margin: {
+      left: 48px;
+      top: $vr / 2;
+    }
+    @include susy-breakpoint(0 $tabletBP) {
+        @include span(12 no-gutters);
+    }
+  }
+  &__search {
+    margin: {
+      top: 28px;
+    }
+  }
+  &__divider {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: {
+      top: 17px;
+      bottom: 21px;
+    }
+    opacity: 0.2;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #000000 50%, rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #000000 50%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 50%, rgba(0, 0, 0, 0));
+  }
+  &__rights {
+    font-size: 12px;
+    line-height: 1.67;
+  }
+}

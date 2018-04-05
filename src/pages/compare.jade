@@ -1,0 +1,100 @@
+- var jTitle = 'Compare Page'
+- var jColorIcons = '4990e2'
+include ../system/_vars
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include ../blocks/head/head
+  body
+    include ../blocks/header/header
+    .compare
+        .container
+            .compare__table-container
+                .compare__table-wrapper
+                    table.compare__table
+                        tbody.compare__section.compare__section-name
+                            tr.compare__row
+                                td.compare__cell.compare__cell-name
+                                    .compare__name-floater
+                                        strong Объект
+                                td.compare__cell 
+                                    a(href='#') 1-комнатная квартира, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') 1-комнатная квартира, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                                td.compare__cell 
+                                    a(href='#') 1-комнатная квартира, 37, 5 м
+                                td.compare__cell 
+                                    a(href='#') 1-комнатная квартира, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') 1-комнатная квартира, 37, 5 м
+                                td.compare__cell
+                                    a(href='#') студия, 37, 5 м
+                            tr.compare__row
+                                td.compare__cell.compare__cell-name
+                                    .compare__name-floater
+                                        strong Стоимость
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 256 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                                td.compare__cell 1 456 456 р
+                            tr.compare__row
+                                td.compare__cell.compare__cell-name
+                                    .compare__name-floater
+                                        strong Количество комнат
+                                td.compare__cell 1 
+                                td.compare__cell 2
+                                td.compare__cell 22
+                                td.compare__cell 2
+                                td.compare__cell 2
+                                td.compare__cell 1
+                                td.compare__cell 1
+                                td.compare__cell 22
+                                td.compare__cell 1
+                                td.compare__cell 1
+                                td.compare__cell 1
+                                td.compare__cell 1
+                                td.compare__cell 1
+    mixin navContent
+        img(src="/img/logo.png", alt="" width="50" height="50").navigation__logo
+        .navigation__title Estate <br>Agency
+        nav.navigation__nav.navigation__nav--right
+          ul.navigation__menu
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('mail', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Отправить сообщение
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('note', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Добавить заявку
+            li.navigation__menu-item
+              a(href="#").navigation__menu-link
+                +use('calc', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+                .navigation__menu-text Рассчитать ипотеку
+    include ../blocks/navigation/_navigation
+    include ../blocks/footer/footer
+    include ../blocks/last/last

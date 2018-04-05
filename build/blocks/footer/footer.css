@@ -1,0 +1,62 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 7, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+.footer {
+  padding-top: 32px;
+  padding-bottom: 92px; }
+  /* line 18, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer__nav {
+    display: block;
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 44px;
+    padding: 0;
+    list-style-type: none;
+    vertical-align: top; }
+    /* line 30, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+    .footer__nav-link {
+      font-size: 18px;
+      line-height: 1.78;
+      color: #000000;
+      text-decoration: none; }
+      /* line 39, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+      .footer__nav-link:hover {
+        color: #3B7ADB;
+        text-decoration: underline; }
+  /* line 45, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer__contacts {
+    width: 32.20339%;
+    float: left;
+    margin-left: 48px;
+    margin-top: 4px; }
+  /* line 55, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer__search {
+    margin-top: 28px; }
+  /* line 60, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer__divider {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 17px;
+    margin-bottom: 21px;
+    opacity: 0.2;
+    background-image: -webkit-linear-gradient(left, transparent, #000000 50%, transparent);
+    background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #000000), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, transparent, #000000 50%, transparent); }
+  /* line 73, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer__rights {
+    font-size: 12px;
+    line-height: 1.67; }
+  @media (min-width: 0) and (max-width: 1024px) {/* line 7, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px; }/* line 45, C:/work/assembly/sites.framework.local/src/blocks/footer/footer.scss */
+  .footer__contacts {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; } }

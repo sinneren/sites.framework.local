@@ -1,0 +1,27 @@
+include ../../system/_mixins
+include ../../system/_vars
+- var jColorIcons = '4990e2'
+
+section.slider
+  .container
+    h2.hot-offer__title #{jTitleBlock}
+    .swiper-container(class=' #{jSliderMasterClass} ')
+      .swiper-wrapper
+        .swiper-slide
+          include ../card/card
+        .swiper-slide
+          include ../card/card
+        .swiper-slide
+          include ../card/card
+        .swiper-slide
+          include ../card/card
+        .swiper-slide
+          include ../card/card
+        .swiper-slide
+          include ../card/card
+    +use('arrow-left', '48', '48', '#' + jColorIcons, 'slider-prev')
+    +use('arrow-right', '48', '48', '#' + jColorIcons, 'slider-next')
+    .text--center
+      a(href='#').button.button-md.button-second #{jTitleBtn}
+link(rel='stylesheet' href='blocks/slider/slider.css')
+script(src='/js/vendors/swiper/js/swiper.jquery.min.js' type='text/javascript')

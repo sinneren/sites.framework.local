@@ -1,0 +1,11 @@
+include ../system/_mixins
+include ../system/_vars
+
+.modal-content.callback
+    button.button.button-md.button-second +7 ... показать номер
+    p Агент может связаться с вами сам:
+    form.form
+        .form-row
+            .ui-input
+                input(type='text' placeholder='Ваш телефон или email')
+                button(type='submit').button.button-blank Отправить

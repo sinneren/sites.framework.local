@@ -1,0 +1,17 @@
+include ../../system/_mixins
+include ../../system/_vars
+- var agentsViewClass = ''
+if agentsView
+    - var agentsViewClass = ' agents'
+    
+a(class='news-list__item#{ agentsViewClass }' href='#')
+  img.news-list__pic(src='' + newsListItemPic alt='')
+  if agentsView
+      .news-list__title Calvin Soto
+      .news-list__subtitle Генеральный директор
+  else
+      .news-list__content Luxury is something everyone deserves from time to time. Such an indulgence can make a vacation a truly rejuvenating experience. One of the best ways to get the luxury of the rich and famous to fit into your budget can be yours through yacht charter companies. These companies specialize in creating custom sailing vacations that redefine travel… 
+      .news-list__date 27.10.2016
+  
+link(rel='stylesheet' href='blocks/news-list-item/news-list-item.css')
+  

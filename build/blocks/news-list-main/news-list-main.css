@@ -1,0 +1,43 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 5, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+.news-list-main {
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, .03);
+  padding-top: 24px; }
+  /* line 17, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+  .news-list-main__title {
+    margin: 0;
+    float: left; }
+  /* line 25, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+  .news-list-main__button {
+    float: right;
+    margin-top: 16px; }
+  /* line 31, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+  .news-list-main .news-list__item {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-top: 32px; }
+    /* line 36, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+    .news-list-main .news-list__item:last-child, .news-list-main .news-list__item:last-of-type {
+      float: right;
+      margin-right: 0; }
+    /* line 40, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+    .news-list-main .news-list__item .news-list__content {
+      max-height: 62px;
+      padding-bottom: 0;
+      margin-bottom: 16px;
+      line-height: 1.23;
+      font-size: 13px;
+      overflow: hidden; }
+    @media (min-width: 0) and (max-width: 1024px) {/* line 5, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+  .news-list-main {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px; }/* line 17, C:/work/assembly/sites.framework.local/src/blocks/news-list-main/news-list-main.scss */
+  .news-list-main__title {
+    font-size: 24px;
+    line-height: 1.33; } }

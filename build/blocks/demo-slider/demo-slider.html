@@ -1,0 +1,84 @@
+
+<section class="demo-slider swiper-container">
+  <div class="demo-slider__nav">
+    <svg role="img" width="48" height="48" fill="#4990e2" class="svg-icon arrow-left demo-slider__prev">
+      <use xlink:href="img/sprites/sprite.symbols.svg#arrow-left"></use>
+    </svg>
+    <svg role="img" width="48" height="48" fill="#4990e2" class="svg-icon arrow-right demo-slider__next">
+      <use xlink:href="img/sprites/sprite.symbols.svg#arrow-right"></use>
+    </svg>
+  </div>
+  <div class="demo-slider__progress"></div>
+  <div class="demo-slider__container swiper-wrapper">
+    <div class="demo-slider__slide swiper-slide">
+      <div class="container demo-slider__texts">
+        <h2 class="demo-slider__title">Элитная недвижимость</h2>
+        <div class="demo-slider__description">This article covers the basics of Astrology and how they are inter-related. Astrology is defined as ‘the art or practice of determining the supposed influences of the planets and their motions on human affairs and human disposition.</div>
+      </div><img src="/res/demo/slide1.jpg" class="demo-slider__picture"/>
+    </div>
+    <div class="demo-slider__slide swiper-slide">
+      <div class="container demo-slider__texts">
+        <h2 class="demo-slider__title">Очень недвижимость</h2>
+        <div class="demo-slider__description">2 This article covers the basics of Astrology and how they are inter-related. Astrology is defined as ‘the art or practice of determining the supposed influences of the planets and their motions on human affairs and human disposition.</div>
+      </div><img src="/res/demo/slide2.jpg" class="demo-slider__picture"/>
+    </div>
+    <div class="demo-slider__slide swiper-slide">
+      <div class="container demo-slider__texts">
+        <h2 class="demo-slider__title">Очень недвижимость</h2>
+        <div class="demo-slider__description">2 This article covers the basics of Astrology and how they are inter-related. Astrology is defined as ‘the art or practice of determining the supposed influences of the planets and their motions on human affairs and human disposition.</div>
+      </div><img src="/res/demo/slide3.jpg" class="demo-slider__picture"/>
+    </div>
+  </div>
+</section>
+<link rel="stylesheet" href="blocks/demo-slider/demo-slider.css"/>
+<script>
+  $(document).ready(function () {
+    var elements = {
+      progressbar: '.demo-slider__progress',
+      progressbarPlane: '.demo-slider__progress-plane',
+      slide: '.demo-slider__slide',
+      container: '.demo-slider__container',
+      texts: '.demo-slider__texts',
+      prevButton: '.demo-slider__prev',
+      nextButton: '.demo-slider__next',
+      activeClass: 'demo-slider__slide--active'
+    };
+    var demosld = new Swiper ('.demo-slider', {
+      loop: true,
+      autoplay: 3000,
+      speed: 1800,
+      autoHeight: true,
+      nextButton: '.demo-slider__prev',
+      prevButton: '.demo-slider__next',
+      spaceBetween: 0,
+      slidesPerView: 1,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+      slideActiveClass: 'demo-slider__slide--active',
+      slideDuplicateActiveClass: 'demo-slider__slide-duplicate--active',
+      breakpoints: {
+          720: {
+              slidesPerView: 1,
+              spaceBetween: 0
+          }
+      },
+      onImagesReady: function (e) {
+        $(elements.progressbar).append('<div class="demo-slider__progress-plane"></div>');
+        $(elements.progressbarPlane).stop(true, true).width(0).animate({
+          'width' : '+=' + $(elements.progressbar).width()
+        }, e.params.autoplay)
+      },
+      onSlideChangeStart: function (e) {
+        $(elements.progressbar).css({
+          'top' : $(elements.container).find('.demo-slider__slide--active').find(elements.texts).outerHeight()
+        });
+        $(elements.progressbarPlane).stop(true, true).width(0);
+      },
+      onSlideChangeEnd: function (e) {
+        $(elements.progressbarPlane).stop(true, true).width(0).animate({
+          'width' : '+=' + $(elements.progressbar).width()
+        }, e.params.autoplay)
+      }
+    });
+  });
+</script>

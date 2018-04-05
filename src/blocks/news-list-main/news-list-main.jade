@@ -1,0 +1,15 @@
+include ../../system/_mixins
+include ../../system/_vars
+
+section.news-list-main
+  .container
+    h2.news-list-main__title Новости
+    a(href='#').button.button-blank.news-list-main__button Все новости
+  .container
+      - var newsListItemPic = '/res/full_3l8de4uv27_cf5f99dd.jpg'
+      include ../news-list-item/news-list-item
+      - var newsListItemPic = '/res/full_3l8de4uv27_cf5f99dd.jpg'
+      include ../news-list-item/news-list-item
+      - var newsListItemPic = '/res/full_3l8de4uv27_cf5f99dd.jpg'
+      include ../news-list-item/news-list-item
+link(rel='stylesheet' href='blocks/news-list-main/news-list-main.css')

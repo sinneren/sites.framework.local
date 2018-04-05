@@ -1,0 +1,53 @@
+include ../../system/_mixins
+include ../../system/_vars
+- var jColorIcons = '4990e2'
+
+.card
+  a(href="#").card__link
+  .card__pic
+    .no-image
+    .card__overlay
+    .card__promo
+      .card__promo-item
+        +usecard('like', '32', '32', 'card__promo-pic')
+        .card__promo-text Рекомендуем
+      .card__promo-item
+        +usecard('flame', '32', '32', 'card__promo-pic')
+        .card__promo-text Горячее предложение
+    .card__media
+      .card__media-item
+        +usecard('photo', '32', '32', 'card__media-icon')
+        .card__media-text 12
+      .card__media-item
+        +usecard('video', '32', '32', 'card__media-icon')
+        .card__media-text 12
+  .card__content
+    .card__content-row
+      h4.card__title 2-ком. квартира, <nobr>133,00 м²</nobr>
+    .card__content-row
+      .card__price от 1 500 000 ₽
+      .card__price-param от 133 м², 1 - 4 ком.
+    .card__content-row
+        div
+            strong Доходность: 15%
+        div Арендный поток: 225 000 ₽/м²
+    .card__content-row
+      .card__location 
+        +use('metro', '32', '32', '#' + jColor, 'card__location-icon')
+        | Шоссе Энтузиастов
+      .card__location
+        +use('geo', '32', '32', '#' + jColor, 'card__location-icon')
+        | Петровско-Разумовская
+    .card__content-row
+      .card__text Watching the news the other day, it occurred to me that people who have “words to live by” often begin to attack and even kill others. I thought back to my own angry youth, when I could easily use words to justify violent…
+    .card__content-row
+      a.card__compare(href='javascript:void(0)' data-compare-id='123' data-compare-remove='N')
+        .card__compare-state.is-hidden 
+          +usecard('compare-fill', '32', '32', 'card__compare-icon')
+          span.card__compare-text Удалить из сравнения
+        .card__compare-state.is-visible 
+          +usecard('compare', '32', '32', 'card__compare-icon')
+          span.card__compare-text Сравнить
+      .card__id №1234
+  link(rel='stylesheet' href='blocks/card/card.css')
+  script(src='blocks/card/card.js')

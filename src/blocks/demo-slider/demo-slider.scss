@@ -1,0 +1,125 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+.demo-slider {
+  position: relative;
+  width: 100%;
+  top: 4px;
+  margin: {
+    top: $vr * 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__nav {
+    position: relative;
+    @include container();
+    @include cfx();
+    @include susy-breakpoint(0 $tabletBP) {
+       display: none;
+    }
+  }
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 112px;
+    z-index: 2;
+    cursor: pointer;
+    &.is-disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+    @include susy-breakpoint(0 $tabletBP) {
+        display: none;
+    }
+  }
+  &__prev {
+    left: -96px;
+  }
+  &__next {
+    right: -96px;
+  }
+  &__title {
+    @include span(7);
+    margin: {
+      bottom: $vr * 2;
+    }
+    font: {
+      size: 64px;
+      weight: 300;
+    }
+    line-height: 1.25;
+    color: $color_ext1;
+    text: {
+      transform: uppercase;
+      shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    clear: both;
+    @include susy-breakpoint(0 $tabletBP) {
+        @include span(12);
+        margin-bottom: 12px;
+        font-size: 32px;
+    }
+  }
+  &__description {
+    @include span(7);
+    clear: both;
+    margin: {
+      bottom: $vr * 2;
+    }
+    font: {
+      size: 15px;
+      weight: bold;
+    }
+    line-height: 1.6;
+    color: $color_ext1;
+    @include susy-breakpoint(0 $tabletBP) {
+        @include span(12);
+        margin: 0 0 10px;
+    }
+  }
+  &__progress {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: $vr / 2;
+    background-color: rgba($color_ext2, 0.5);
+    z-index: 2;
+    &-plane {
+      width: 0;
+      height: 4px;
+      background-color: $color_second;
+    }
+  }
+  &__texts {
+    @include cfx();
+    opacity: 0.15;
+    transition: opacity 3000ms ease-out;
+    transition-delay: 1800ms;
+    @include susy-breakpoint(0 $tabletBP) {
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
+    }
+  }
+  &__picture {
+    width: 100%;
+    height: 496px;
+    object-fit: cover;
+    background-size: cover;
+    @include susy-breakpoint(0 $tabletBP) {
+        height: 274px;
+    }
+  }
+  &__slide {
+    width: 100%;
+    &-duplicate--active,
+    &--active {
+      .demo-slider__texts {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,310 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$filterBG: #F7F7F7;
+$sectionBG: $color_main;
+$filterLabelColor: $color_ext1;
+$sectionColor: $color_ext2;
+$inputFZ: 13px;
+$inputBR: $borderRadius;
+$inputSidePadding: 12px;
+$inputHeight: $vr * 4;
+$inputIconSize: $inputHeight;
+$universalSize: $vr * 2;
+
+.filter {
+  display: none;
+  padding: {
+    top: 32px;
+    bottom: 31px;
+  }
+  background-color: $filterBG;
+  @include cfx();
+  @include susy-breakpoint(0 $tabletBP) {
+      padding: {
+          top: 20px;
+          left: 20px;
+          right: 20px;
+      }
+  }
+  &.is-active {
+    display: block;
+  }
+  &__cell {
+    @include span(4);
+    margin: {
+      bottom: $vr * 2;
+    }
+    &:nth-child(3n+3) {
+      margin-right: 0;
+      float: right;
+    }
+    @include susy-breakpoint(0 $tabletBP) {
+        @include span(12);
+    }
+  }
+  &__label {
+    max-width: 280px;
+    font: {
+      size: 14px;
+      weight: bold;
+    }
+    line-height: 2.29;
+    color: $filterLabelColor;
+    .button {
+      position: relative;
+      top: $vr;
+    }
+  }
+  &__control {
+    max-width: 280px;
+    &--wide {
+      max-width: 100%;
+    }
+  }
+  &__submit {
+    @include span(12);
+    @include cfx();
+    margin: {
+      top: $vr + 2;
+      bottom: $vr * 2;
+    }
+    clear: both;
+  }
+  &__mobile-name {
+      display: none;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      float: left;
+      font-size: 16px;
+      font-weight: bold;
+      color: $color_main;
+      text-transform: uppercase;
+      @include susy-breakpoint(0 $tabletBP) {
+          display: block;
+      }
+  }
+  &__close {
+      display: none;
+      @include susy-breakpoint(0 $tabletBP) {
+          display: block;
+          position: absolute;
+          top: 16px;
+          right: 16px;
+      }
+  }
+  &--mobile {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9000;
+      overflow-y: auto;
+      .ui-input {
+          width: 100%;
+          &--split {
+              padding-right: 60px;
+          }
+      }
+      .filter__control {
+          max-width: 100%;
+      }
+      .toggle-btn {
+          width: 100%;
+      }
+      .select2 {
+          position: relative;
+          z-index: 2;
+      }
+      .filter__submit {
+          .button {
+              width: 100%;
+          }
+      }
+  }
+}
+.select-dropdown {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    &:before {
+        content: '';
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba($color_fullblk, 0.03);
+        z-index: 1;
+    }
+    .select2 {
+        display: none;
+    }
+    &__select {
+        display: none;
+        position: relative;
+    }
+    &__text {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: $inputHeight;
+        float: left;
+        padding: {
+            left: $inputSidePadding;
+            right: $inputIconSize;
+            top: $vr / 2;
+            bottom: $vr / 2;
+        }
+        border-radius: $inputBR;
+        border: solid 1px #979797;
+        outline: none;
+        font: {
+            family: $ff;
+            size: $inputFZ;
+        }
+        vertical-align: middle;
+        line-height: 1.71;
+        color: $color_ext1;
+        cursor: pointer;
+        z-index: 2;
+        &:hover {
+            border-color: $color_main;
+        }
+    }
+    &__control {
+        position: relative;
+        background-color: $color_ext2;
+        z-index: 2;
+        border-radius: $inputBR;
+        @include cfx();
+    }
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__popup {
+        display: none;
+        position: absolute;
+        width: $width;
+        left: -100%;
+        right: -100%;
+        top: $inputHeight;
+        @include pull(2);
+        padding: {
+            top: $vr * 2;
+            left: 17px;
+            right: 17px;
+            bottom: $vr * 4;
+        }
+        border-radius: 10px;
+        background-color: $color_ext2;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.06);
+        border: solid 1px #eeeeee;
+        z-index: 2;
+    }
+    &__row {
+        @include cfx();
+        &:first-child {
+            border-bottom: 1px solid $color_ext3;
+        }
+        padding: {
+            top: $vr * 2;
+            bottom: $vr * 2;
+        }
+    }
+    &__col {
+        font: {
+            size: 18px;
+        }
+        line-height: 1.78;
+        text-align: left;
+        color: rgba($color_ext1, 0.6);
+        &:first-child {
+            @include span(2.5);
+        }
+        &:last-child {
+            @include span(9);
+        }
+    }
+    &__checkin {
+        display: inline-block;
+        height: $vr * 4;
+        padding: {
+            top: $vr;
+            bottom: $vr;
+            left: $vr * 2;
+            right: $vr * 2;
+        }
+        margin: {
+            bottom: $vr * 2;
+            right: $vr;
+        }
+        border-radius: 4px;
+        font: {
+            size: 14px;
+            weight: 500;
+        }
+        line-height: 1.14;
+        text-align: center;
+        color: $color_main;
+        background-color: $color_ext2;
+        border: solid 1px $color_main;
+        cursor: pointer;
+        &--active {
+            background-color: $color_main;
+            color: $color_ext2;
+        }
+    }
+    &__toggler {
+        float: left;
+        padding: {
+            top: $vr - 1;
+            bottom: $vr - 1;
+            left: $vr * 2;
+            right: $vr * 2;
+        }
+        font-size: 16px;
+        line-height: 1.03;
+        text-align: center;
+        color: $color_main;
+        cursor: pointer;
+        &:hover,
+        &--active {
+            color: $color_ext2;
+            font-weight: 500;
+            background-color: $color_main;
+        }
+    }
+    &--active {
+        .select-dropdown__text {
+            border-color: $color_second;
+        }
+        &:before {
+            display: block;
+        }
+        .select-dropdown__popup {
+            display: block;
+        }
+    }
+}
+.toggler__wrapper {
+    @include cfx();
+    float: left;
+    height: 32px;
+    border-radius: 4px;
+    background-color: $color_ext2;
+    border: solid 1px $color_main;
+}

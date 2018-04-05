@@ -1,0 +1,135 @@
+include ../../system/_mixins
+include ../../system/_vars
+- var jColorIcons = '4990e2'
+- var jColorLeads = 'FFF'
+section.filter
+  .filter__mobile-name Фильтр
+  +use('close', '48', '48', '#' + jColorIcons, 'filter__close')
+  .container
+    .filter__cell
+      .filter__label Я хочу
+      .filter__control
+        .toggle-btn
+          label.toggle-btn__item
+            input(type='radio' name='deal' checked)
+            .toggle-btn__view Купить
+          label.toggle-btn__item
+            input(type='radio' name='deal')
+            .toggle-btn__view Продать
+    .filter__cell
+      .filter__label Недвижимость
+      .filter__control
+        .select-dropdown
+          input(type='hidden' value='0' name='d-type' data-sd='mainparam')
+          input(type='hidden' value='3' name='ds-type' data-sd='subparam')
+          select.select-dropdown__select.select
+            option(value='0') Жилая
+            option(value='1' selected) Коммерческая
+          .select-dropdown__control
+            span.select-dropdown__text Квартира
+            +use('radio-true-copy', '32', '32', '#' + jColorIcons, 'select-dropdown__icon')
+          .select-dropdown__popup
+            .select-dropdown__row
+              .select-dropdown__col &nbsp;
+              .select-dropdown__col
+                .toggler__wrapper
+                  .select-dropdown__toggler.select-dropdown__toggler--active(data-mainParam='0') все
+                  .select-dropdown__toggler(data-mainparam='1') первичная
+                  .select-dropdown__toggler(data-mainparam='2') вторичная
+            .select-dropdown__row.select-dropdown__row--active(data-select='0')
+              .select-dropdown__col Жилая
+              .select-dropdown__col
+                .select-dropdown__checkin(data-subparam='1') Дом
+                .select-dropdown__checkin(data-subparam='2') Квартира
+                .select-dropdown__checkin.select-dropdown__checkin--active(data-subparam='3') Коттеджи
+                .select-dropdown__checkin(data-subparam='4') Таунхаусы
+                .select-dropdown__checkin(data-subparam='5') Земельные участки
+            .select-dropdown__row(data-select='1')
+              .select-dropdown__col Коммерческая
+              .select-dropdown__col
+                .select-dropdown__checkin(data-subparam='6') Офис
+                .select-dropdown__checkin(data-subparam='7') Гараж
+                .select-dropdown__checkin(data-subparam='8') Склад
+                .select-dropdown__checkin(data-subparam='9') Производство
+                .select-dropdown__checkin(data-subparam='10') Земельные участки
+                .select-dropdown__checkin(data-subparam='11') Инвестпроект
+                .select-dropdown__checkin(data-subparam='12') Торговля
+                .select-dropdown__checkin(data-subparam='13') Общепит
+                .select-dropdown__checkin(data-subparam='14') Отдельное стоящее здание
+                .select-dropdown__checkin(data-subparam='15') Помещение свободного назначения
+    .filter__cell
+      .filter__label Стоимость
+      .filter__control.filter__control--wide
+        select(width="40px" data-width="40px").select-helper
+          option ₽
+          option $
+        .ui-input.ui-input--split
+          input.input-split(data-range="price-min")
+          input.input-split(data-range="price-max")
+        - var jRangeID = 'j-range-price'
+        include ../range/range
+        script.
+          handlesSlider.init({
+            selector: "#{jRangeID}",
+            inputs: [
+              $('[data-range="price-min"]'),
+              $('[data-range="price-max"]')
+            ]
+          });
+    .filter__cell
+      .filter__label Жилой комплекс
+      .filter__control
+        select(name="" placeholder="Все" style="width: 100%").select
+          option Квартира
+          option Дом
+          option Гараж
+          option Таунхаус
+    .filter__cell
+      .filter__label Район
+      .filter__control 
+        select(name="" placeholder="Район" style="width: 100%").select
+          option Петроградский
+          option Приморский
+          option Невский
+          option Московский
+    .filter__cell
+      .filter__label Площадь
+      .filter__control.filter__control--wide
+        select(width="40px" data-width="40px" disabled).select-helper
+          option(selected) м²
+        .ui-input.ui-input--split
+          input.input-split(data-range="square-min")
+          input.input-split(data-range="square-max")
+        - var jRangeID = 'j-range-meter'
+        include ../range/range
+        script.
+          handlesSlider.init({
+            selector: "#{jRangeID}"
+            ,
+            inputs: [
+              $('[data-range="square-min"]'),
+              $('[data-range="square-max"]')
+            ]
+          });
+    .filter__cell
+      .filter__label Количество комнат
+      .filter__control 
+        include ../check-counter/check-counter
+    .filter__cell
+      .filter__label Выберите метро
+        a(href='#').button.button-sm.pull--right Схема
+      .filter__control
+        select(name="" placeholder="Любое" style="width:100%").select
+          option Петроградская
+          option Горьковская
+          option Невский проспект
+          option Московская
+    .filter__submit.text--center
+        a(href='#').button.button-md.button-second Подобрать
+
+link(rel='stylesheet' href='blocks/filter/filter.css')
+script(src='blocks/filter/filter.js')
+script.
+  filterBlock.init({
+    selector: '.filter'
+  });

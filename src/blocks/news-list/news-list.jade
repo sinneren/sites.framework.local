@@ -1,0 +1,25 @@
+include ../../system/_mixins
+include ../../system/_vars
+
+mixin content
+    - var newsListItemPic = '/res/full_3l8de4uv27_cf5f99dd.jpg'
+    include ../news-list-item/news-list-item
+    - var newsListItemPic = '/res/full_7uw70pu2sd_682b479e.jpg'
+    include ../news-list-item/news-list-item
+    - var newsListItemPic = '/res/full_8vx50w5531_e9d9340d.jpg'
+    include ../news-list-item/news-list-item
+    - var newsListItemPic = '/res/full_35kfhp3xo5_989fc736.jpg'
+    include ../news-list-item/news-list-item
+    - var newsListItemPic = '/res/full_874phn4agq_fd42fbec.jpg'
+    include ../news-list-item/news-list-item
+    
+if firstDetail
+    section.news-list.first-detail
+        +content
+else 
+    section.news-list
+        +content
+
+  
+link(rel='stylesheet' href='blocks/news-list/news-list.css')
+  

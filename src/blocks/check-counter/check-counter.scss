@@ -1,0 +1,44 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$checkBColor: $color_ext2;
+$checkColor: $color_main;
+$checkHoverBColor:  darken($color_ext2, 7%);
+$checkBRad: $borderRadius;
+$checkHeight: $vr * 4;
+$checkWidth: $checkHeight;
+
+.check-counter {
+  display: inline-block;
+  background-color: $checkBColor;
+  border: solid 1px $checkColor;
+  border-radius: $checkBRad;
+  overflow: hidden;
+  @include cfx();
+  &__item {
+    float: left;
+    width: $checkWidth;
+    height: $checkHeight;
+    line-height: $checkHeight;
+    &:hover {
+      background-color: $checkHoverBColor;
+      cursor: pointer;
+    }
+  }
+  &__view {
+    text-align: center;
+    color: $checkColor;
+    font: {
+      size: $fz;
+      weight: 500;
+    }
+  }
+  &__checkbox {
+    display: none;
+    &:checked + .check-counter__view {
+      background-color: $checkColor;
+      color: $checkBColor;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$rangeTargetColor: rgba(#000, .15);
+$rangeConnectColor: $color_ext1;
+$rangeHandleColor: $color_ext2;
+$rangeHandleBorderColor: $color_main;
+$rangeBorder: none;
+$rangeShadow: none;
+$rangeBrad: 5px;
+$rangeConnectBrad: 0;
+$rangeHeight: 4px;
+$rangeHandleSize: 14px;
+
+.range {
+  padding-top: 14px;
+  &-slider {
+    &.noUi {
+      &-target {
+        height: $rangeHeight;
+        background-color: $rangeTargetColor;
+        box-shadow: $rangeShadow;
+        border: $rangeBorder;
+        border-radius: 0;
+      }
+    }
+    .noUi {
+      &-connect {
+        border-radius: $rangeConnectBrad;
+        box-shadow: $rangeShadow;
+        background-color: $rangeConnectColor;
+      }
+      &-handle {
+        width: $rangeHandleSize;
+        height: $rangeHandleSize;
+        left: -5px;
+        top: -5px;
+        background-color: $rangeHandleColor;
+        border-radius: 50%;
+        border: 2px solid $rangeHandleBorderColor;
+        box-shadow: $rangeShadow;
+        &:hover {
+          width: $rangeHandleSize + 2;
+          height: $rangeHandleSize + 2;
+          left: -6px;
+          top: -6px;
+          background-color: $rangeHandleBorderColor;
+          cursor: pointer;
+          outline: none;
+        }
+        &:focus {
+          outline: none;
+        }
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+      &-origin {
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

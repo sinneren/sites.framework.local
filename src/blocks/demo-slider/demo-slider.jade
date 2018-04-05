@@ -1,0 +1,76 @@
+include ../../system/_mixins
+include ../../system/_vars
+- var jColorIcons = '4990e2'
+
+section.demo-slider.swiper-container
+  .demo-slider__nav
+    +use('arrow-left', '48', '48', '#' + jColorIcons, 'demo-slider__prev')
+    +use('arrow-right', '48', '48', '#' + jColorIcons, 'demo-slider__next')
+  .demo-slider__progress
+  .demo-slider__container.swiper-wrapper
+    .demo-slider__slide.swiper-slide
+      .container.demo-slider__texts
+        h2.demo-slider__title Элитная недвижимость
+        .demo-slider__description This article covers the basics of Astrology and how they are inter-related. Astrology is defined as ‘the art or practice of determining the supposed influences of the planets and their motions on human affairs and human disposition.
+      img(src='/res/demo/slide1.jpg').demo-slider__picture
+    .demo-slider__slide.swiper-slide
+      .container.demo-slider__texts
+        h2.demo-slider__title Очень недвижимость
+        .demo-slider__description 2 This article covers the basics of Astrology and how they are inter-related. Astrology is defined as ‘the art or practice of determining the supposed influences of the planets and their motions on human affairs and human disposition.
+      img(src='/res/demo/slide2.jpg').demo-slider__picture
+    .demo-slider__slide.swiper-slide
+      .container.demo-slider__texts
+        h2.demo-slider__title Очень недвижимость
+        .demo-slider__description 2 This article covers the basics of Astrology and how they are inter-related. Astrology is defined as ‘the art or practice of determining the supposed influences of the planets and their motions on human affairs and human disposition.
+      img(src='/res/demo/slide3.jpg').demo-slider__picture
+link(rel='stylesheet' href='blocks/demo-slider/demo-slider.css')
+script.
+  $(document).ready(function () {
+    var elements = {
+      progressbar: '.demo-slider__progress',
+      progressbarPlane: '.demo-slider__progress-plane',
+      slide: '.demo-slider__slide',
+      container: '.demo-slider__container',
+      texts: '.demo-slider__texts',
+      prevButton: '.demo-slider__prev',
+      nextButton: '.demo-slider__next',
+      activeClass: 'demo-slider__slide--active'
+    };
+    var demosld = new Swiper ('.demo-slider', {
+      loop: true,
+      autoplay: 3000,
+      speed: 1800,
+      autoHeight: true,
+      nextButton: '.demo-slider__prev',
+      prevButton: '.demo-slider__next',
+      spaceBetween: 0,
+      slidesPerView: 1,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+      slideActiveClass: 'demo-slider__slide--active',
+      slideDuplicateActiveClass: 'demo-slider__slide-duplicate--active',
+      breakpoints: {
+          720: {
+              slidesPerView: 1,
+              spaceBetween: 0
+          }
+      },
+      onImagesReady: function (e) {
+        $(elements.progressbar).append('<div class="demo-slider__progress-plane"></div>');
+        $(elements.progressbarPlane).stop(true, true).width(0).animate({
+          'width' : '+=' + $(elements.progressbar).width()
+        }, e.params.autoplay)
+      },
+      onSlideChangeStart: function (e) {
+        $(elements.progressbar).css({
+          'top' : $(elements.container).find('.demo-slider__slide--active').find(elements.texts).outerHeight()
+        });
+        $(elements.progressbarPlane).stop(true, true).width(0);
+      },
+      onSlideChangeEnd: function (e) {
+        $(elements.progressbarPlane).stop(true, true).width(0).animate({
+          'width' : '+=' + $(elements.progressbar).width()
+        }, e.params.autoplay)
+      }
+    });
+  });

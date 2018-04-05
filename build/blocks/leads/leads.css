@@ -1,0 +1,56 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/* line 10, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+.leads {
+  background-color: #4990E2;
+  color: #FFFFFF; }
+  /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .leads:after, .leads:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 16, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+  .leads-row {
+    margin-left: -16px;
+    margin-right: -16px; }
+  /* line 21, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+  .leads__nav {
+    float: right; }
+  /* line 24, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+  .leads__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    vertical-align: middle; }
+    /* line 29, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+    .leads__menu-item {
+      display: block;
+      float: left; }
+      /* line 32, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+      .leads__menu-item.is-active, .leads__menu-item:hover {
+        background-color: #000000;
+        background-color: rgba(0, 0, 0, .07); }
+    /* line 39, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+    .leads__menu-link {
+      display: block;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 2;
+      color: #FFFFFF; }
+      /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+      .leads__menu-link:after, .leads__menu-link:after {
+        content: '';
+        display: table;
+        clear: both; }
+    /* line 55, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+    .leads__menu-icon {
+      display: block;
+      float: left; }
+    /* line 59, C:/work/assembly/sites.framework.local/src/blocks/leads/leads.scss */
+    .leads__menu-text {
+      float: left; }

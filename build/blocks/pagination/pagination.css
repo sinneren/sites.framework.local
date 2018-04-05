@@ -1,0 +1,41 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 7, C:/work/assembly/sites.framework.local/src/blocks/pagination/pagination.scss */
+.pagination {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 48px; }
+  /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .pagination:after, .pagination:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 14, C:/work/assembly/sites.framework.local/src/blocks/pagination/pagination.scss */
+  .pagination-wrapper {
+    display: inline-block;
+    height: 32px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    border: solid 1px #4990E2;
+    overflow: hidden; }
+    /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+    .pagination-wrapper:after, .pagination-wrapper:after {
+      content: '';
+      display: table;
+      clear: both; }
+  /* line 22, C:/work/assembly/sites.framework.local/src/blocks/pagination/pagination.scss */
+  .pagination__item {
+    float: left;
+    width: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+    color: #4990E2;
+    cursor: pointer; }
+    /* line 33, C:/work/assembly/sites.framework.local/src/blocks/pagination/pagination.scss */
+    .pagination__item--active {
+      color: #FFFFFF;
+      background-color: #4990E2; }

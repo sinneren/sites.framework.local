@@ -1,0 +1,50 @@
+- var jTitle = 'Contacts Page'
+include ../system/_vars
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include ../blocks/head/head
+  body
+    include ../blocks/header/header
+    .container
+        h1 Контакты
+        .contacts__texts
+            p +7 (495) 580-95-55? +7 (985) 413-11-11
+            p mail@mail.ru
+            p &nbsp;
+            h4 Ждем в нашем офисе:
+            p БЦ "Мамонтов", метро Парк Культуры
+            p ул. Тимура Фрунзе, дом 11, корпус 2, офис 329
+        .contacts__form
+            h4 Обратная связь
+            form.form
+                .form-row
+                    .ui-input
+                        input(type='text' placeholder='Ваше имя')
+                .form-row
+                    .ui-input
+                        input(type='phone' placeholder='+7 9__ ___-__-__')
+                .form-row
+                    .ui-input
+                        textarea(placeholder='Текст сообщения')
+    mixin navContent
+      img(src="/img/logo.png", alt="" width="50" height="50").navigation__logo
+      .navigation__title Estate <br>Agency
+      nav.navigation__nav.navigation__nav--right
+        ul.navigation__menu
+          li.navigation__menu-item
+            a(href="#").navigation__menu-link
+              +use('mail', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+              .navigation__menu-text Отправить сообщение
+          li.navigation__menu-item
+            a(href="#").navigation__menu-link
+              +use('note', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+              .navigation__menu-text Добавить заявку
+          li.navigation__menu-item
+            a(href="#").navigation__menu-link
+              +use('calc', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+              .navigation__menu-text Рассчитать ипотеку
+    include ../blocks/navigation/_navigation
+    include ../blocks/footer/footer
+    include ../blocks/last/last

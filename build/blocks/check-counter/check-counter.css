@@ -1,0 +1,40 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 12, C:/work/assembly/sites.framework.local/src/blocks/check-counter/check-counter.scss */
+.check-counter {
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: solid 1px #4990E2;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  overflow: hidden; }
+  /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .check-counter:after, .check-counter:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 19, C:/work/assembly/sites.framework.local/src/blocks/check-counter/check-counter.scss */
+  .check-counter__item {
+    float: left;
+    width: 32px;
+    height: 32px;
+    line-height: 32px; }
+    /* line 24, C:/work/assembly/sites.framework.local/src/blocks/check-counter/check-counter.scss */
+    .check-counter__item:hover {
+      background-color: #ededed;
+      cursor: pointer; }
+  /* line 29, C:/work/assembly/sites.framework.local/src/blocks/check-counter/check-counter.scss */
+  .check-counter__view {
+    text-align: center;
+    color: #4990E2;
+    font-size: 16px;
+    font-weight: 500; }
+  /* line 37, C:/work/assembly/sites.framework.local/src/blocks/check-counter/check-counter.scss */
+  .check-counter__checkbox {
+    display: none; }
+    /* line 39, C:/work/assembly/sites.framework.local/src/blocks/check-counter/check-counter.scss */
+    .check-counter__checkbox:checked + .check-counter__view {
+      background-color: #4990E2;
+      color: #FFFFFF; }

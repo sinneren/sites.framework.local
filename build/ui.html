@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>UI Page</title>
+    <meta charset="utf-8"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta property="og:title" content="site.title"/>
+    <meta property="og:og:description" content="site.description"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="msapplication-TileColor" content="4990e2"/>
+    <meta name="theme-color" content="4990e2"/>
+    <link rel="stylesheet" href="/js/vendors/swiper/css/swiper.min.css"/>
+    <link rel="stylesheet" href="/js/vendors/jquery-modal/jquery.modal.min.css"/>
+    <link rel="stylesheet" href="/css/scope.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <script src="/js/vendors/jquery/jquery.min.js"></script>
+    <script src="/js/vendors/select2/select2.full.min.js"></script>
+    <script src="/js/vendors/swiper/js/swiper.jquery.min.js"></script>
+    <script src="/js/vendors/jquery-modal/jquery.modal.min.js"></script>
+  </head>
+  <body>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="range">
+        <div id="j-range" class="range-slider"></div>
+      </div>
+      <link rel="stylesheet" href="js/vendors/nouislider/nouislider.min.css"/>
+      <link rel="stylesheet" href="blocks/range/range.css"/>
+      <script src="js/vendors/nouislider/wNumb.js"></script>
+      <script src="js/vendors/nouislider/nouislider.min.js"></script>
+      <script src="blocks/range/range.js"></script>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="check-counter">
+        <label class="check-counter__item">
+          <input type="checkbox" name="rooms[]" value="1" class="check-counter__checkbox"/>
+          <div class="check-counter__view">1</div>
+        </label>
+        <label class="check-counter__item">
+          <input type="checkbox" name="rooms[]" value="2" class="check-counter__checkbox"/>
+          <div class="check-counter__view">2</div>
+        </label>
+        <label class="check-counter__item">
+          <input type="checkbox" name="rooms[]" value="3" class="check-counter__checkbox"/>
+          <div class="check-counter__view">3</div>
+        </label>
+        <label class="check-counter__item">
+          <input type="checkbox" name="rooms[]" value="4" class="check-counter__checkbox"/>
+          <div class="check-counter__view">4</div>
+        </label>
+        <label class="check-counter__item">
+          <input type="checkbox" name="rooms[]" value="5" class="check-counter__checkbox"/>
+          <div class="check-counter__view">5</div>
+        </label>
+      </div>
+      <link rel="stylesheet" href="blocks/check-counter/check-counter.css"/>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <button class="button button-lg">Large</button>
+      <button class="button button-md">Middle</button>
+      <button class="button">Normal</button>
+      <button class="button button-sm">Small</button>
+      <button disabled="disabled" class="button is-disabled">Disabled</button>
+      <button class="button button-md has-icon"> 
+              <svg role="img" width="32" height="32" fill="#FFFFFF" class="svg-icon search button-icon">
+                <use xlink:href="img/sprites/sprite.symbols.svg#search"></use>
+              </svg>Icon
+      </button>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <button class="button button-lg button-blank">Large</button>
+      <button class="button button-md button-blank">Middle</button>
+      <button class="button button-blank">Normal</button>
+      <button class="button button-sm button-blank">Small</button>
+      <button disabled="disabled" class="button button-blank is-disabled">Disabled</button>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="ui-input">
+        <input placeholder="Placeholder"/>
+      </div>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="ui-input is-invalid">
+        <input placeholder="Placeholder"/>
+        <div class="ui-input-msg">Lipsum err text</div>
+      </div>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="ui-input">
+        <textarea placeholder="Placeholder"></textarea>
+      </div>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="ui-input has-postfix">
+        <input placeholder="Placeholder"/>
+              <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon search ui-input-postfix">
+                <use xlink:href="img/sprites/sprite.symbols.svg#search"></use>
+              </svg>
+      </div>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="ui-input has-prefix">
+        <input placeholder="Placeholder"/>
+              <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon search ui-input-prefix">
+                <use xlink:href="img/sprites/sprite.symbols.svg#search"></use>
+              </svg>
+      </div>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="ui-input has-prefix has-postfix">
+        <input placeholder="Placeholder"/>
+              <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon search ui-input-prefix">
+                <use xlink:href="img/sprites/sprite.symbols.svg#search"></use>
+              </svg>
+              <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon search ui-input-postfix">
+                <use xlink:href="img/sprites/sprite.symbols.svg#search"></use>
+              </svg>
+      </div>
+    </div>
+    <div style="margin-top: 8px; margin-bottom: 8px">
+      <div class="card"><a href="#" class="card__link"></a>
+        <div class="card__pic">
+          <div class="no-image"></div>
+          <div class="card__overlay"></div>
+          <div class="card__promo">
+            <div class="card__promo-item">
+                    <svg role="img" width="32" height="32" class="svg-icon like card__promo-pic">
+                      <use xlink:href="img/sprites/sprite.card.svg#like"></use>
+                    </svg>
+              <div class="card__promo-text">Рекомендуем</div>
+            </div>
+            <div class="card__promo-item">
+                    <svg role="img" width="32" height="32" class="svg-icon flame card__promo-pic">
+                      <use xlink:href="img/sprites/sprite.card.svg#flame"></use>
+                    </svg>
+              <div class="card__promo-text">Горячее предложение</div>
+            </div>
+          </div>
+          <div class="card__media">
+            <div class="card__media-item">
+                    <svg role="img" width="32" height="32" class="svg-icon photo card__media-icon">
+                      <use xlink:href="img/sprites/sprite.card.svg#photo"></use>
+                    </svg>
+              <div class="card__media-text">12</div>
+            </div>
+            <div class="card__media-item">
+                    <svg role="img" width="32" height="32" class="svg-icon video card__media-icon">
+                      <use xlink:href="img/sprites/sprite.card.svg#video"></use>
+                    </svg>
+              <div class="card__media-text">12</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__content-row">
+            <h4 class="card__title">2-ком. квартира, <nobr>133,00 м²</nobr></h4>
+          </div>
+          <div class="card__content-row">
+            <div class="card__price">от 1 500 000 ₽</div>
+            <div class="card__price-param">от 133 м², 1 - 4 ком.</div>
+          </div>
+          <div class="card__content-row">
+            <div><strong>Доходность: 15%</strong></div>
+            <div>Арендный поток: 225 000 ₽/м²</div>
+          </div>
+          <div class="card__content-row">
+            <div class="card__location"> 
+                    <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon metro card__location-icon">
+                      <use xlink:href="img/sprites/sprite.symbols.svg#metro"></use>
+                    </svg>Шоссе Энтузиастов
+            </div>
+            <div class="card__location">
+                    <svg role="img" width="32" height="32" fill="#4990e2" class="svg-icon geo card__location-icon">
+                      <use xlink:href="img/sprites/sprite.symbols.svg#geo"></use>
+                    </svg>Петровско-Разумовская
+            </div>
+          </div>
+          <div class="card__content-row">
+            <div class="card__text">Watching the news the other day, it occurred to me that people who have “words to live by” often begin to attack and even kill others. I thought back to my own angry youth, when I could easily use words to justify violent…</div>
+          </div>
+          <div class="card__content-row"><a href="javascript:void(0)" data-compare-id="123" data-compare-remove="N" class="card__compare">
+              <div class="card__compare-state is-hidden"> 
+                      <svg role="img" width="32" height="32" class="svg-icon compare-fill card__compare-icon">
+                        <use xlink:href="img/sprites/sprite.card.svg#compare-fill"></use>
+                      </svg><span class="card__compare-text">Удалить из сравнения</span>
+              </div>
+              <div class="card__compare-state is-visible"> 
+                      <svg role="img" width="32" height="32" class="svg-icon compare card__compare-icon">
+                        <use xlink:href="img/sprites/sprite.card.svg#compare"></use>
+                      </svg><span class="card__compare-text">Сравнить</span>
+              </div></a>
+            <div class="card__id">№1234</div>
+          </div>
+        </div>
+        <link rel="stylesheet" href="blocks/card/card.css"/>
+        <script src="blocks/card/card.js"></script>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

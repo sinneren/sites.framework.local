@@ -1,0 +1,218 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 7, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+.card {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  position: relative;
+  background-color: #FFFFFF;
+  border: solid 1px #eeeeee;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .03);
+          box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .03);
+  overflow: hidden;
+  color: #4A4A4A;
+  font-size: 16px;
+  line-height: 1.5; }
+  /* line 18, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card:hover {
+    -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .06);
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .06); }
+    /* line 21, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card:hover .card__promo-item {
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0); }
+    /* line 25, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card:hover .card__overlay,
+    .card:hover .card__media,
+    .card:hover .card__promo-text {
+      opacity: 1; }
+  /* line 34, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__pic {
+    position: relative;
+    width: 100%;
+    height: 192px;
+    background-color: #4990E2; }
+    /* line 39, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__pic .no-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  /* line 48, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left; }
+    /* line 58, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__content-row {
+      padding-top: 8px;
+      padding-bottom: 8px; }
+      /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+      .card__content-row:after, .card__content-row:after {
+        content: '';
+        display: table;
+        clear: both; }
+      /* line 64, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+      .card__content-row + .card__content-row {
+        border-top: 1px solid rgba(0, 0, 0, .1); }
+      /* line 67, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+      .card__content-row:first-child {
+        padding-top: 0; }
+      /* line 70, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+      .card__content-row:last-child {
+        padding-bottom: 0; }
+  /* line 75, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #4A4A4A; }
+  /* line 87, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  /* line 97, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__price {
+    float: left;
+    font-size: 24px;
+    line-height: 2;
+    color: #4A4A4A;
+    white-space: nowrap; }
+    /* line 105, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__price-param {
+      clear: both;
+      font-weight: bold;
+      line-height: 2; }
+  /* line 111, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__text {
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.23;
+    color: #4A4A4A; }
+  /* line 119, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__location {
+    font-size: 16px;
+    line-height: 2;
+    color: #4A4A4A; }
+    /* line 123, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__location-icon {
+      float: left; }
+  /* line 127, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__compare {
+    float: left;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4A4A4A; }
+    /* line 135, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__compare-icon {
+      float: left; }
+    /* line 138, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__compare-text {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 1.78;
+      color: #4A4A4A; }
+  /* line 145, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__id {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.29;
+    color: #9B9B9B; }
+  /* line 154, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease; }
+  /* line 166, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__promo {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 3; }
+    /* line 171, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__promo-item {
+      display: block;
+      margin-bottom: 8px;
+      clear: both; }
+      /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+      .card__promo-item:after, .card__promo-item:after {
+        content: '';
+        display: table;
+        clear: both; }
+    /* line 177, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__promo-pic {
+      float: left; }
+    /* line 180, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__promo-text {
+      display: block;
+      float: left;
+      margin-top: 4px;
+      margin-left: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.6;
+      color: #FFFFFF;
+      opacity: 0;
+      -webkit-transition: opacity 300ms ease;
+      transition: opacity 300ms ease; }
+  /* line 197, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card__media {
+    position: absolute;
+    opacity: 0;
+    bottom: 51px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center; }
+    /* line 205, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__media-item {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+    /* line 212, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__media-icon {
+      float: left; }
+    /* line 215, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+    .card__media-text {
+      float: left;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 2.29;
+      color: #FFFFFF; }
+    @media (min-width: 0) and (max-width: 1024px) {/* line 7, C:/work/assembly/sites.framework.local/src/blocks/card/card.scss */
+  .card {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; } }

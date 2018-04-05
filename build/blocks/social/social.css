@@ -1,0 +1,16 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 5, C:/work/assembly/sites.framework.local/src/blocks/social/social.scss */
+.social {
+  margin-top: 34px; }
+  /* line 2, C:/work/assembly/sites.framework.local/src/scss/_mixins.scss */
+  .social:after, .social:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 8, C:/work/assembly/sites.framework.local/src/blocks/social/social.scss */
+  .social__link {
+    float: left;
+    margin-right: 9px; }

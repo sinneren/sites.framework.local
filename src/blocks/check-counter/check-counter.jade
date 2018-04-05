@@ -1,0 +1,11 @@
+include ../../system/_mixins
+include ../../system/_vars
+
+.check-counter
+  - for(var i=1; i<6; i++) {
+    label.check-counter__item
+      input(type='checkbox' name='rooms[]' value=i).check-counter__checkbox
+      .check-counter__view= i
+  - }
+
+link(rel='stylesheet' href='blocks/check-counter/check-counter.css')

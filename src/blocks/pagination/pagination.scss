@@ -1,0 +1,38 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import "../../../bower_components/susy/sass/susy";
+
+$paginationBR: $borderRadius;
+
+.pagination {
+  text-align: center;
+  @include cfx();
+  margin: {
+    top: $vr * 2;
+    bottom: $vr * 6;
+  }
+  &-wrapper {
+    display: inline-block;
+    height: $vr * 4;
+    border-radius: $paginationBR;
+    border: solid 1px $color_main;
+    overflow: hidden;
+    @include cfx();
+  }
+  &__item {
+    float: left;
+    width: $vr * 4;
+    font: {
+      size: 16px;
+      weight: 500;
+    }
+    line-height: 2;
+    text-align: center;
+    color: $color_main;
+    cursor: pointer;
+    &--active {
+      color: $color_ext2;
+      background-color: $color_main;
+    }
+  }
+}

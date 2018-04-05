@@ -1,0 +1,63 @@
+/*Colors*/
+/*Pixels*/
+/*Fonts*/
+/*BP*/
+/* line 7, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+.benefits {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  background-color: #ECF3FC; }
+  /* line 23, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__item {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-top: 32px;
+    margin-bottom: 24px; }
+    /* line 29, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+    .benefits__item:nth-child(odd) {
+      float: right;
+      margin-right: 0; }
+    /* line 39, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+    .benefits__item-title {
+      margin-top: 50px;
+      font-size: 30px;
+      font-size: 30px;
+      line-height: 2.13;
+      text-align: left;
+      color: #4A4A4A; }
+  /* line 57, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__pic {
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px; }
+  /* line 68, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__title {
+    margin: 0;
+    font-weight: normal; }
+  /* line 78, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__text {
+    clear: both; }
+  @media (min-width: 0) and (max-width: 1024px) {/* line 7, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 20px; }/* line 23, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__item {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 8px;
+    margin-bottom: 8px; }/* line 39, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__item-title {
+    margin-top: 8px;
+    font-size: 24px;
+    line-height: 1.33; }/* line 57, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__pic {
+    float: none;
+    clear: both; }/* line 68, C:/work/assembly/sites.framework.local/src/blocks/benefits/benefits.scss */
+  .benefits__title {
+    font-size: 24px;
+    line-height: 1.33; } }

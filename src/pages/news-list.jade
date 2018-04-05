@@ -1,0 +1,35 @@
+- var jTitle = 'News list Page'
+include ../system/_vars
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include ../blocks/head/head
+  body
+    include ../blocks/header/header
+    include ../blocks/breadcrumbs/breadcrumbs
+    .container
+      h1 Новости
+      - var firstDetail = true
+      include ../blocks/news-list/news-list
+      include ../blocks/pagination/pagination
+    mixin navContent
+      img(src="/img/logo.png", alt="" width="50" height="50").navigation__logo
+      .navigation__title Estate <br>Agency
+      nav.navigation__nav.navigation__nav--right
+        ul.navigation__menu
+          li.navigation__menu-item
+            a(href="#").navigation__menu-link
+              +use('mail', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+              .navigation__menu-text Отправить сообщение
+          li.navigation__menu-item
+            a(href="#").navigation__menu-link
+              +use('note', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+              .navigation__menu-text Добавить заявку
+          li.navigation__menu-item
+            a(href="#").navigation__menu-link
+              +use('calc', '32', '32', '#' + jColorLeads, 'navigation__menu-icon')
+              .navigation__menu-text Рассчитать ипотеку
+    include ../blocks/navigation/_navigation
+    include ../blocks/footer/footer
+    include ../blocks/last/last
